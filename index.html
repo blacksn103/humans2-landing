@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Humans² — Your growth team. Squared.</title>
+<meta name="description" content="Humans² brings senior growth operators and AI together to run your full funnel — creating more, learning faster, and turning every dollar into more revenue.">
+<meta property="og:title" content="Humans² — Your growth team. Squared.">
+<meta property="og:description" content="AI growth operating agency. Performance marketing & creative, run by senior growth operators and AI.">
+<meta property="og:url" content="https://humans2.ai">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='%23fff' text-anchor='middle'%3EH%C2%B2%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#000; --fg:#fff; --muted:rgba(255,255,255,.62); --dim:rgba(255,255,255,.38);
+    --line:rgba(255,255,255,.12);
+    --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+    --sans:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%;background:var(--bg);color:var(--fg);font-family:var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  body{overflow:hidden}
+  #bg{position:fixed;inset:0;z-index:0;display:block}
+  .vignette{position:fixed;inset:0;z-index:1;pointer-events:none;
+    background:radial-gradient(ellipse at center,rgba(0,0,0,0) 35%,rgba(0,0,0,.75) 100%)}
+  .grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+  .page{position:relative;z-index:2;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
+  header{display:flex;align-items:center;justify-content:space-between;padding:28px clamp(20px,4vw,56px)}
+  .logo{font-family:var(--serif);font-size:28px;letter-spacing:-.01em;text-decoration:none;color:var(--fg);display:flex;align-items:baseline;gap:1px}
+  .logo sup{font-size:.62em;position:relative;top:-.15em}
+  .nav-cta{font-size:14px;color:var(--fg);text-decoration:none;padding:9px 16px;border:1px solid var(--line);border-radius:999px;transition:border-color .25s,background .25s;backdrop-filter:blur(6px)}
+  .nav-cta:hover{border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.05)}
+
+  main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px clamp(20px,4vw,56px) 64px}
+  .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);margin-bottom:28px;
+    display:inline-flex;align-items:center;gap:12px}
+  .eyebrow::before,.eyebrow::after{content:"";width:28px;height:1px;background:var(--line)}
+  h1{font-family:var(--serif);font-weight:400;letter-spacing:-.025em;line-height:.98;
+    font-size:clamp(52px,9vw,124px);max-width:15ch;text-wrap:balance}
+  h1 em{font-style:italic;color:rgba(255,255,255,.88)}
+  .sub{margin:34px auto 0;max-width:62ch;font-size:clamp(16px,1.35vw,20px);line-height:1.55;color:var(--muted);text-wrap:pretty}
+  .sub strong{color:var(--fg);font-weight:500}
+  .cta{margin-top:44px;display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:999px;font-size:15px;font-weight:500;text-decoration:none;
+    background:var(--fg);color:#000;transition:transform .25s,box-shadow .25s;box-shadow:0 0 0 0 rgba(255,255,255,.0)}
+  .btn:hover{transform:translateY(-1px);box-shadow:0 0 40px rgba(255,255,255,.25)}
+  .btn svg{width:16px;height:16px;transition:transform .25s}
+  .btn:hover svg{transform:translate(2px,-2px)}
+  .tags{margin-top:64px;display:flex;flex-wrap:wrap;gap:10px 8px;justify-content:center;max-width:820px}
+  .tags span{font-size:12.5px;letter-spacing:.02em;color:var(--dim);padding:7px 13px;border:1px solid var(--line);border-radius:999px;backdrop-filter:blur(6px)}
+
+  footer{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px clamp(20px,4vw,56px);font-size:12.5px;color:var(--dim);border-top:1px solid rgba(255,255,255,.06)}
+  footer a{color:var(--dim);text-decoration:none}
+  footer a:hover{color:var(--fg)}
+
+  .reveal{opacity:0;transform:translateY(14px);animation:up .9s cubic-bezier(.2,.7,.2,1) forwards}
+  .d1{animation-delay:.1s}.d2{animation-delay:.25s}.d3{animation-delay:.4s}.d4{animation-delay:.55s}.d5{animation-delay:.7s}
+  @keyframes up{to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.reveal{animation:none;opacity:1;transform:none}}
+
+  @media (max-width:640px){
+    body{overflow:auto}
+    header{padding:20px}
+    .logo{font-size:24px}
+    h1{font-size:clamp(44px,13vw,64px)}
+    .sub{margin-top:26px;font-size:16px}
+    .tags{margin-top:44px}
+    .eyebrow{margin-bottom:22px}
+    .eyebrow::before,.eyebrow::after{display:none}
+    footer{flex-direction:column;align-items:flex-start;gap:8px}
+  }
+</style>
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="vignette" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="page">
+  <header>
+    <a class="logo" href="/" aria-label="Humans squared">Humans<sup>2</sup></a>
+    <a class="nav-cta" href="mailto:hello@humans2.ai">Contact us</a>
+  </header>
+
+  <main>
+    <div class="eyebrow reveal d1">AI growth operating agency</div>
+    <h1 class="reveal d2">Your growth team.<br><em>Squared.</em></h1>
+    <p class="sub reveal d3">
+      Humans² brings <strong>senior growth operators</strong> and <strong>AI</strong> together to run your full funnel —
+      creating more, learning faster, and turning every dollar into more revenue.
+    </p>
+    <div class="cta reveal d4">
+      <a class="btn" href="mailto:hello@humans2.ai">
+        Contact us
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12 12 4M6 4h6v6"/></svg>
+      </a>
+    </div>
+    <div class="tags reveal d5">
+      <span>Performance marketing</span>
+      <span>Creative at scale</span>
+      <span>Full-funnel optimization</span>
+      <span>AI agents + human taste</span>
+      <span>Faster experimentation</span>
+      <span>Lower acquisition costs</span>
+    </div>
+  </main>
+
+  <footer>
+    <div>© 2026 Humans² · Human taste. Machine speed.</div>
+    <div><a href="mailto:hello@humans2.ai">hello@humans2.ai</a></div>
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+<script>
+(function(){
+  if(!window.THREE) return;
+  var canvas=document.getElementById('bg');
+  var renderer;
+  try{ renderer=new THREE.WebGLRenderer({canvas:canvas,antialias:true,alpha:true,powerPreference:'high-performance'}); }
+  catch(e){ canvas.style.display='none'; return; }
+  var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
+  var scene=new THREE.Scene();
+  scene.fog=new THREE.FogExp2(0x000000,0.09);
+  var camera=new THREE.PerspectiveCamera(55,1,0.1,100);
+  camera.position.set(0,0,9);
+
+  var group=new THREE.Group(); scene.add(group);
+
+  // Outer wireframe sphere: the "system"
+  var outer=new THREE.Mesh(
+    new THREE.IcosahedronGeometry(3.6,2),
+    new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true,transparent:true,opacity:0.07}));
+  group.add(outer);
+
+  // Inner glowing core: the "human" — two nested shapes (humans, squared)
+  var core=new THREE.Mesh(
+    new THREE.IcosahedronGeometry(1.4,1),
+    new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true,transparent:true,opacity:0.22}));
+  group.add(core);
+  var core2=new THREE.Mesh(
+    new THREE.IcosahedronGeometry(1.9,1),
+    new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true,transparent:true,opacity:0.10}));
+  group.add(core2);
+
+  // Orbiting particle rings
+  function ring(r,n,size,op){
+    var pos=new Float32Array(n*3);
+    for(var i=0;i<n;i++){var a=i/n*Math.PI*2, j=(Math.random()-0.5)*0.35;
+      pos[i*3]=Math.cos(a)*(r+j); pos[i*3+1]=(Math.random()-0.5)*0.25; pos[i*3+2]=Math.sin(a)*(r+j);}
+    var g=new THREE.BufferGeometry(); g.setAttribute('position',new THREE.BufferAttribute(pos,3));
+    var m=new THREE.PointsMaterial({color:0xffffff,size:size,transparent:true,opacity:op,sizeAttenuation:true,depthWrite:false});
+    return new THREE.Points(g,m);
+  }
+  var r1=ring(4.6,900,0.025,0.55); r1.rotation.x=Math.PI*0.42; group.add(r1);
+  var r2=ring(5.4,700,0.02,0.35); r2.rotation.x=Math.PI*0.48; r2.rotation.z=0.5; group.add(r2);
+
+  // Star field
+  (function(){
+    var n=1400,pos=new Float32Array(n*3);
+    for(var i=0;i<n;i++){pos[i*3]=(Math.random()-0.5)*60;pos[i*3+1]=(Math.random()-0.5)*40;pos[i*3+2]=-10-Math.random()*40;}
+    var g=new THREE.BufferGeometry(); g.setAttribute('position',new THREE.BufferAttribute(pos,3));
+    scene.add(new THREE.Points(g,new THREE.PointsMaterial({color:0xffffff,size:0.06,transparent:true,opacity:0.5,depthWrite:false})));
+  })();
+
+  var mx=0,my=0,tx=0,ty=0;
+  window.addEventListener('pointermove',function(e){tx=(e.clientX/window.innerWidth-0.5);ty=(e.clientY/window.innerHeight-0.5);},{passive:true});
+
+  function resize(){var w=window.innerWidth,h=window.innerHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();
+    group.position.y = w<640 ? 0.6 : 0; group.scale.setScalar(w<640?0.8:1);}
+  window.addEventListener('resize',resize); resize();
+
+  var t0=performance.now();
+  function frame(now){
+    var t=(now-t0)/1000;
+    mx+=(tx-mx)*0.04; my+=(ty-my)*0.04;
+    if(!reduced){
+      outer.rotation.y=t*0.05; outer.rotation.x=Math.sin(t*0.08)*0.2;
+      core.rotation.y=-t*0.18; core.rotation.z=t*0.09;
+      core2.rotation.y=t*0.11; core2.rotation.x=-t*0.07;
+      r1.rotation.y=t*0.08; r2.rotation.y=-t*0.06;
+      var s=1+Math.sin(t*1.4)*0.03; core.scale.setScalar(s);
+    }
+    group.rotation.y+= (mx*0.5-group.rotation.y)*0.05;
+    group.rotation.x+= (my*0.3-group.rotation.x)*0.05;
+    renderer.render(scene,camera);
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
