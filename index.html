@@ -37,7 +37,7 @@
   .nav-cta:hover{border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.05)}
 
   main{display:block}
-  .hero{min-height:calc(92vh - 88px);min-height:calc(92dvh - 88px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px clamp(20px,4vw,56px) 48px}
+  .hero{min-height:calc(92vh - 88px);min-height:calc(92dvh - 88px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px clamp(20px,4vw,56px) 34px}
   .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);margin-bottom:28px;
     display:inline-flex;align-items:center;gap:12px}
   .eyebrow::before,.eyebrow::after{content:"";width:28px;height:1px;background:var(--line)}
@@ -55,8 +55,12 @@
   .btn:hover svg{transform:translate(2px,-2px)}
   .tags{margin-top:48px;display:flex;flex-wrap:wrap;gap:10px 8px;justify-content:center;max-width:820px}
   .tags span{font-size:12.5px;letter-spacing:.02em;color:var(--dim);padding:7px 13px;border:1px solid var(--line);border-radius:999px;backdrop-filter:blur(6px)}
+  .trusted{margin-top:28px;display:inline-flex;align-items:center;gap:14px;padding:10px 18px;border:1px solid rgba(255,255,255,.1);border-radius:999px;background:rgba(255,255,255,.035);backdrop-filter:blur(8px);color:var(--muted);font-size:12.5px;line-height:1.35}
+  .trusted-icon{width:18px;height:18px;flex:0 0 auto;color:rgba(255,255,255,.76)}
+  .trusted span{max-width:54ch}
+  .trusted strong{color:rgba(255,255,255,.86);font-weight:500}
 
-  .section{position:relative;padding:54px clamp(20px,4vw,56px);border-top:1px solid rgba(255,255,255,.06);overflow:hidden}
+  .section{position:relative;padding:42px clamp(20px,4vw,56px) 54px;border-top:1px solid rgba(255,255,255,.06);overflow:hidden}
   .section::before{content:"";position:absolute;inset:0;z-index:-1;background:
     radial-gradient(ellipse at 50% 0%,rgba(255,255,255,.06),rgba(255,255,255,0) 38%),
     linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.62))}
@@ -94,13 +98,14 @@
   @media (max-width:640px){
     header{padding:20px}
     .logo{font-size:24px}
-    .hero{min-height:auto;padding:64px 20px 56px}
+    .hero{min-height:auto;padding:64px 20px 38px}
     h1{font-size:clamp(44px,13vw,64px)}
     .sub{margin-top:26px;font-size:16px}
     .tags{margin-top:36px}
+    .trusted{display:flex;align-items:flex-start;gap:12px;width:100%;max-width:360px;margin-top:24px;border-radius:18px;padding:13px 15px;text-align:left}
     .eyebrow{margin-bottom:22px}
     .eyebrow::before,.eyebrow::after{display:none}
-    .section{padding:48px 20px}
+    .section{padding:38px 20px 48px}
     .section-head{margin-bottom:24px}
     h2{font-size:clamp(36px,11vw,54px)}
     .service{padding:20px}
@@ -144,6 +149,12 @@
         <span>Apple Search Ads</span>
         <span>Human judgment + AI</span>
       </div>
+      <div class="trusted reveal d5">
+        <svg class="trusted-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 3.5 14.5 9l6 .65-4.45 4.05 1.2 5.9L12 16.58 6.75 19.6l1.2-5.9L3.5 9.65 9.5 9 12 3.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+        </svg>
+        <span><strong>Paid ads experts from YC</strong> managing $20M+ in marketing spend.</span>
+      </div>
     </section>
 
     <section class="section">
@@ -156,21 +167,21 @@
             <div>
               <small>01</small>
               <h3>Paid acquisition</h3>
-              <p>Meta, Google, TikTok and Apple Search Ads.</p>
+              <p>We know how to make Meta, Google, and TikTok convert for your product.</p>
             </div>
           </article>
           <article class="service">
             <div>
               <small>02</small>
               <h3>Creative strategy</h3>
-              <p>Insights turned into hooks, concepts and creatives.</p>
+              <p>We analyze 10M+ creatives to catch the right hooks, concepts, and creatives.</p>
             </div>
           </article>
           <article class="service">
             <div>
               <small>03</small>
               <h3>Funnels</h3>
-              <p>Landing pages, web-to-app flows, paywalls and checkout.</p>
+              <p>Landing pages, web-to-app flows, and paywalls optimized for your traffic.</p>
             </div>
           </article>
         </div>
