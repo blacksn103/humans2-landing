@@ -35,9 +35,7 @@ export default async function handler(req, res) {
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return res.status(400).json({ error: 'invalid_email' });
   }
-  if (question.length < 10) {
-    return res.status(400).json({ error: 'question_too_short' });
-  }
+  // question is optional (Viktor teardown lead-magnet captures email only)
 
   const to   = process.env.LEAD_TO   || 'hello@humans2.ai';
   const from = process.env.LEAD_FROM || 'humans² <lead@humans2.ai>';
@@ -48,24 +46,29 @@ export default async function handler(req, res) {
     req.socket?.remoteAddress || '';
   const ua = (req.headers['user-agent'] || '').toString().slice(0, 300);
 
-  const subject = `[humans²] New lead-magnet question from ${email}`;
+  const hasQuestion = question && question.length >= 2;
+  const subject = hasQuestion
+    ? `[humans²] New lead-magnet question from ${email}`
+    : `[humans²] New lead from ${source} — ${email}`;
+
+  const divider = '----------------------------------------';
   const text =
-`New question from the humans2.ai lead-magnet page.
+`New lead from the humans2.ai lead-magnet page.
 
 From:     ${email}
 Source:   ${source}
 Received: ${ts}
 IP:       ${ip}
 UA:       ${ua}
-
-— Question ————————————————————————
+${hasQuestion ? `
+${divider}
 ${question}
-——————————————————————————————————
-`;
+${divider}
+` : ''}`;
 
   const html = `
 <div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:620px;margin:0 auto;color:#111;line-height:1.55">
-  <h2 style="margin:0 0 8px;font-family:Georgia,serif;font-weight:400">New humans² lead-magnet question</h2>
+  <h2 style="margin:0 0 8px;font-family:Georgia,serif;font-weight:400">New humans² lead ${hasQuestion ? '— with question' : ''}</h2>
   <p style="margin:0 0 18px;color:#555">${escapeHtml(source)} · ${escapeHtml(ts)}</p>
   <table style="width:100%;border-collapse:collapse;font-size:14px">
     <tr><td style="padding:6px 0;color:#777;width:90px">From</td>
@@ -74,15 +77,15 @@ ${question}
     <tr><td style="padding:6px 0;color:#777;vertical-align:top">UA</td>
         <td style="padding:6px 0;color:#555">${escapeHtml(ua)}</td></tr>
   </table>
-  <div style="margin-top:22px;padding:18px 20px;background:#f6f6f6;border-radius:10px;white-space:pre-wrap;font-size:15px">
+  ${hasQuestion ? `<div style="margin-top:22px;padding:18px 20px;background:#f6f6f6;border-radius:10px;white-space:pre-wrap;font-size:15px">
 ${escapeHtml(question)}
-  </div>
+  </div>` : ''}
   <p style="margin-top:24px;color:#999;font-size:12px">Sent from humans2.ai · /lead-magnet</p>
 </div>`;
 
   if (!key) {
-    // Soft-success mode — still accept so Alex can wire Resend later without breaking the UX.
-    console.log('[lead] (no RESEND_API_KEY) accepted lead:', { email, source, ts, question: question.slice(0, 160) });
+    // Soft-success mode — still accept so RESEND_API_KEY can be wired later without breaking UX.
+    console.log('[lead] (no RESEND_API_KEY) accepted lead:', { email, source, ts, hasQuestion });
     return res.status(200).json({ ok: true, delivered: false, note: 'logged_only' });
   }
 
