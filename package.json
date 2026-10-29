@@ -4,6 +4,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node -e \"const fs=require('fs'),p=require('path'); fs.mkdirSync('public',{recursive:true}); for(const f of ['index.html','lead-magnet.html']){ if(fs.existsSync(f)) fs.copyFileSync(f,p.join('public',f)); } console.log('static site ready: '+fs.readdirSync('public').join(', '))\""
+    "build": "node -e \"const fs=require('fs'),p=require('path'); function cp(src,dst){fs.mkdirSync(p.dirname(dst),{recursive:true}); fs.copyFileSync(src,dst);} function walk(d,base){ if(!fs.existsSync(d))return; for(const e of fs.readdirSync(d,{withFileTypes:true})){ const s=p.join(d,e.name); if(e.isDirectory()) walk(s,base); else cp(s,p.join('public',p.relative(base,s))); } } fs.rmSync('public',{recursive:true,force:true}); fs.mkdirSync('public',{recursive:true}); for(const f of ['index.html','lead-magnet.html']){ if(fs.existsSync(f)) cp(f,p.join('public',f)); } if(fs.existsSync('og')) walk('og','.'); console.log('static site ready: '+require('child_process').execSync('find public -type f').toString().trim())\""
   }
 }
