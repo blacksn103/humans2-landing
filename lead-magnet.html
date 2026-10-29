@@ -99,7 +99,7 @@
   @keyframes up{to{opacity:1;transform:none}}
 
   /* ================= TEARDOWN (PDF-deck light pages) ================= */
-  .teardown{display:none;background:var(--paper);color:var(--ink);font-family:var(--sans);position:relative;z-index:5}
+  .teardown{display:none;background:var(--paper);color:var(--ink);font-family:var(--sans);position:relative;z-index:5;overflow-x:hidden}
   .teardown.show{display:block;animation:fadeIn .6s ease}
   @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 
@@ -123,8 +123,8 @@
   .lede{margin-top:16px;color:var(--gray-700);font-size:clamp(15px,1.3vw,18px);line-height:1.5;max-width:68ch;text-wrap:pretty}
   .lede .em{color:var(--ink);font-weight:600}
 
-  /* ---- COVER (dark page) ---- */
-  .cover{background:var(--cover-bg);color:#f3efe6;margin:0 -1000px;padding:0 1000px}
+  /* ---- COVER (dark page, full-bleed) ---- */
+  .cover{background:var(--cover-bg);color:#f3efe6;position:relative;width:100vw;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;padding:0 clamp(24px,4vw,56px)}
   .cover-inner{min-height:72vh;padding:56px 0;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
   .cover-inner::after{content:"";position:absolute;top:-10%;right:-15%;width:72%;height:120%;background:radial-gradient(circle,rgba(107,63,240,.55),rgba(107,63,240,0) 60%);pointer-events:none}
   .cover-head,.cover-foot{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:baseline;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(243,239,230,.55);font-weight:500}
@@ -205,9 +205,11 @@
   .ad-grid-2{margin-top:36px;display:grid;grid-template-columns:1fr 1fr;gap:36px}
   .ad-grid-3{margin-top:36px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
   .ad-card{display:flex;flex-direction:column;gap:16px}
-  .ad-thumb{position:relative;aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:linear-gradient(135deg,var(--gray-100),var(--gray-50));display:flex;align-items:center;justify-content:center;color:var(--gray-500);font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-align:center;padding:20px}
-  .ad-thumb.vd{aspect-ratio:9/16}
+  .ad-thumb{position:relative;aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:linear-gradient(135deg,var(--gray-100),var(--gray-50));display:flex;align-items:center;justify-content:center;color:var(--gray-500);font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-align:center;padding:0}
+  .ad-thumb.vd{aspect-ratio:9/14}
   .ad-thumb.pr{aspect-ratio:4/3}
+  .ad-thumb img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+  .ad-thumb a.src{position:absolute;inset:0;z-index:3}
   .ad-badge{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,.78);color:#fff;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;padding:6px 10px;border-radius:999px;display:inline-flex;align-items:center;gap:6px;font-weight:600}
   .ad-badge::before{content:"▶";font-size:9px}
   .ad-card .label{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600}
@@ -228,8 +230,8 @@
   .car-card .q{font-size:13.5px;font-weight:600;line-height:1.3}
   .car-cap{margin-top:12px;font-size:12px;color:var(--gray-500);text-align:center}
 
-  /* ---- Final CTA block (page 02 vibe but inline) ---- */
-  .closing{background:var(--cover-bg);color:#f3efe6;margin:0 -1000px;padding:0 1000px}
+  /* ---- Final CTA block (full-bleed dark) ---- */
+  .closing{background:var(--cover-bg);color:#f3efe6;position:relative;width:100vw;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;padding:0 clamp(24px,4vw,56px)}
   .closing-inner{padding:80px 0 72px;position:relative;overflow:hidden}
   .closing-inner::before{content:"";position:absolute;top:-20%;right:-10%;width:60%;height:140%;background:radial-gradient(circle,rgba(107,63,240,.45),rgba(107,63,240,0) 60%);pointer-events:none}
   .closing-inner > *{position:relative;z-index:2}
@@ -259,8 +261,12 @@
     .gate-main{padding:28px 20px 60px;min-height:auto}
     .deck{padding:0 20px}
     .page{padding:36px 0 40px}
-    .cover,.closing{margin:0 -20px;padding:0 20px}
+    .cover,.closing{padding:0 20px}
     .cover-body{padding:36px 0}
+    .cover-title{font-size:clamp(56px,16vw,96px)}
+    .cover-sub{font-size:clamp(18px,5vw,24px)}
+    /* Keep three-stats visible on narrow screens */
+    .page .two-col[style*="1.6fr"]{grid-template-columns:1fr !important}
   }
 </style>
 </head>
@@ -609,14 +615,14 @@
       <p class="lede">1,119 launches, Mar – Aug, up to 131 a day. One concrete question, one concrete answer. The product UI is the proof.</p>
       <div class="ad-grid-2">
         <article class="ad-card">
-          <div class="ad-thumb vd">UGC thumbnail<div class="ad-badge">Video · 0:39</div></div>
+          <div class="ad-thumb vd"><img src="/og/creatives/980310278399493.jpg" alt="Viktor cross-tool UGC ad" loading="lazy"><div class="ad-badge">Video · 0:39</div></div>
           <span class="label">Cross-tool demo · UGC video</span>
           <div class="q">"@Viktor, what's our revenue so far this week &amp; how's our pipeline looking?" Stripe + HubSpot + Linear in one Slack message.</div>
           <div class="meta">Viktor · Jul 2 – Jul 15, 2026 · 4 versions · ID 980310278399493</div>
           <a class="link" href="https://www.facebook.com/ads/library/?id=980310278399493" target="_blank" rel="noopener">▶ watch video in Ad Library →</a>
         </article>
         <article class="ad-card">
-          <div class="ad-thumb pr">Product screenshot</div>
+          <div class="ad-thumb pr"><img src="/og/creatives/1487339129552066.jpg" alt="Viktor cross-tool static ad" loading="lazy"></div>
           <span class="label">Cross-tool demo · Static</span>
           <div class="q">"Your team doesn't need another dashboard. They need a coworker who already knows Stripe, Notion, HubSpot, Linear…" Card: "1 Slack message. Viktor builds the tool."</div>
           <div class="meta">Viktor · May 7 – Jul 15, 2026 · 9 versions · ID 1487339129552066</div>
@@ -633,14 +639,14 @@
       <p class="lede">288 launches in spring, back as video in late September. Dedicated landing page (viktor.com/media-lp). The persona is named in the first line, not in targeting.</p>
       <div class="ad-grid-2">
         <article class="ad-card">
-          <div class="ad-thumb vd">UGC thumbnail<div class="ad-badge">Video · 0:26</div></div>
+          <div class="ad-thumb vd"><img src="/og/creatives/4456749137923159.jpg" alt="Viktor media buyer UGC ad" loading="lazy"><div class="ad-badge">Video · 0:26</div></div>
           <span class="label">Media buyer · UGC video</span>
           <div class="q">"@Viktor, pause any Meta ad sets with CPA over $40 and shift that budget to the top performers."</div>
           <div class="meta">Viktor · Jun 1 – Jul 3, 2026 · 6 versions · ID 4456749137923159</div>
           <a class="link" href="https://www.facebook.com/ads/library/?id=4456749137923159" target="_blank" rel="noopener">▶ watch video in Ad Library →</a>
         </article>
         <article class="ad-card">
-          <div class="ad-thumb vd">Brand video<div class="ad-badge">Video · 0:30</div></div>
+          <div class="ad-thumb vd"><img src="/og/creatives/1593325579196080.jpg" alt="Viktor media buyer brand video ad" loading="lazy"><div class="ad-badge">Video · 0:30</div></div>
           <span class="label">Media buyer · Video</span>
           <div class="q">"Viktor basically runs like a media buyer that never logs off. Pacing checks, performance summaries, client reporting."</div>
           <div class="meta">Viktor · Sep 29, 2026 – live · 8 versions · ID 1593325579196080</div>
@@ -656,21 +662,21 @@
       <h2 class="h-lg" style="margin-top:28px">Salary math &amp; "builds software"</h2>
       <div class="ad-grid-3">
         <article class="ad-card">
-          <div class="ad-thumb pr" style="background:linear-gradient(135deg,#efeaff,#c7bdfd)">Static ad</div>
+          <div class="ad-thumb pr"><img src="/og/creatives/27875953088762789.jpg" alt="Viktor replace-a-hire static ad" loading="lazy"></div>
           <span class="label">Replace a hire · Static</span>
           <div class="q">"One founder gave the $90K ops role to Viktor. The work is done daily in Slack, and the budget stayed."</div>
           <div class="meta">Viktor · Aug 18 – Sep 2 · 17 versions · ID 27875953088762789</div>
           <a class="link" href="https://www.facebook.com/ads/library/?id=27875953088762789" target="_blank" rel="noopener">open in Ad Library →</a>
         </article>
         <article class="ad-card">
-          <div class="ad-thumb vd">Skit video<div class="ad-badge">Video · 0:44</div></div>
+          <div class="ad-thumb vd"><img src="/og/creatives/2052935128725876.jpg" alt="Viktor builds-software skit video ad" loading="lazy"><div class="ad-badge">Video · 0:44</div></div>
           <span class="label">Builds software · Skit video</span>
           <div class="q">"The agency quoted fifteen grand for a client portal and a login screen. Viktor built ours over the weekend."</div>
           <div class="meta">Viktor · Sep 30 – Oct 14 · 13 versions · ID 2052935128725876</div>
           <a class="link" href="https://www.facebook.com/ads/library/?id=2052935128725876" target="_blank" rel="noopener">▶ watch video in Ad Library →</a>
         </article>
         <article class="ad-card">
-          <div class="ad-thumb vd">Creator video<div class="ad-badge">Video · 1:13</div></div>
+          <div class="ad-thumb vd"><img src="/og/creatives/1805741600437562.jpg" alt="Mitch Conquer creator video ad" loading="lazy"><div class="ad-badge">Video · 1:13</div></div>
           <span class="label">Builds software · Creator</span>
           <div class="q">"An agency was quoted $30,000 and four months for an AI client portal. Viktor built it in seven minutes."</div>
           <div class="meta">Mitch Conquer with Viktor · Oct 7 – live · 6 versions · ID 1805741600437562</div>
@@ -687,14 +693,14 @@
       <p class="lede">Heavy in Sep – Oct. Viktor picks the model per task, so "which model" stops being the buyer's problem.</p>
       <div class="ad-grid-2">
         <article class="ad-card">
-          <div class="ad-thumb pr">Static ad</div>
+          <div class="ad-thumb pr"><img src="/og/creatives/1592582945414860.jpg" alt="Viktor model-routing static ad" loading="lazy"></div>
           <span class="label">Model routing · Static</span>
           <div class="q">"Picking a model shouldn't be a gamble. Viktor has all the top models built in and chooses the right one per task."</div>
           <div class="meta">Viktor · Sep 29, 2026 – live · 8 versions · ID 1592582945414860</div>
           <a class="link" href="https://www.facebook.com/ads/library/?id=1592582945414860" target="_blank" rel="noopener">open in Ad Library →</a>
         </article>
         <article class="ad-card">
-          <div class="ad-thumb pr" style="background:linear-gradient(135deg,#c7bdfd,#8d7fc0)">Static ad</div>
+          <div class="ad-thumb pr"><img src="/og/creatives/1082514880950390.jpg" alt="Viktor model-routing static ad" loading="lazy"></div>
           <span class="label">Model routing · Static</span>
           <div class="q">"Viktor chooses the right model per task and returns the finished work. The model wars stop being your problem."</div>
           <div class="meta">Viktor · Sep 2 – Sep 11, 2026 · 12 versions · ID 1082514880950390</div>
@@ -711,14 +717,14 @@
       <p class="lede">The raise ($75M → $87M) and the team count (45,000+ → 60,000+) are used as headlines and updated often.</p>
       <div class="ad-grid-2">
         <article class="ad-card">
-          <div class="ad-thumb pr" style="background:linear-gradient(135deg,#1a1a24,#37374a);color:#d3d1cf">Static · dark</div>
+          <div class="ad-thumb pr"><img src="/og/creatives/1384045167124170.jpg" alt="Viktor $75M funding static ad" loading="lazy"></div>
           <span class="label">Funding proof · Static</span>
           <div class="q">"Viktor raised $75M because the work he returns is real. 45,000+ teams already know."</div>
           <div class="meta">Viktor · Aug 18 – Aug 29, 2026 · 6 versions · ID 1384045167124170</div>
           <a class="link" href="https://www.facebook.com/ads/library/?id=1384045167124170" target="_blank" rel="noopener">open in Ad Library →</a>
         </article>
         <article class="ad-card">
-          <div class="ad-thumb pr" style="background:linear-gradient(135deg,#dfb787,#b17b4a);color:#5a3a1a">Static · warm</div>
+          <div class="ad-thumb pr"><img src="/og/creatives/1109047728750055.jpg" alt="Viktor $87M funding static ad" loading="lazy"></div>
           <span class="label">Funding proof · Static</span>
           <div class="q">"Serious backing, simple promise. Viktor takes the busywork and your team keeps the judgment calls." $87M raised.</div>
           <div class="meta">Viktor · Oct 12, 2026 – live · 1 version · ID 1109047728750055</div>
@@ -735,14 +741,14 @@
       <p class="lede">Spring curiosity hooks: 72% of hooks in June, 8% by October. ChatGPT and OpenClaw are named on purpose (mirrors the /compare pages).</p>
       <div class="ad-grid-2">
         <article class="ad-card">
-          <div class="ad-thumb vd">UGC thumbnail<div class="ad-badge">Video · 0:32</div></div>
+          <div class="ad-thumb vd"><img src="/og/creatives/986210853865092.jpg" alt="Viktor UGC ChatGPT hook ad" loading="lazy"><div class="ad-badge">Video · 0:32</div></div>
           <span class="label">UGC curiosity hook</span>
           <div class="q">"I Stopped Using ChatGPT After This…"</div>
           <div class="meta">Viktor · May 7 – May 30, 2026 · 3 versions · ID 986210853865092</div>
           <a class="link" href="https://www.facebook.com/ads/library/?id=986210853865092" target="_blank" rel="noopener">▶ watch video in Ad Library →</a>
         </article>
         <article class="ad-card">
-          <div class="ad-thumb vd">UGC thumbnail<div class="ad-badge">Video · 0:21</div></div>
+          <div class="ad-thumb vd"><img src="/og/creatives/1294773076178802.jpg" alt="Viktor UGC OpenClaw foil ad" loading="lazy"><div class="ad-badge">Video · 0:21</div></div>
           <span class="label">UGC · Competitor foil</span>
           <div class="q">"OpenClaw Is Cool… But Is It Safe?"</div>
           <div class="meta">Viktor · Jun 3 – Jun 30, 2026 · 4 versions · ID 1294773076178802</div>
