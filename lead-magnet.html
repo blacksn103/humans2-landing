@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>humans² — ask us anything</title>
+<meta name="description" content="Private lead-magnet page for humans². Ask a question, get a tailored answer from the humans² team.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:title" content="humans² — ask us anything">
+<meta property="og:description" content="Private intake for humans² prospects. Drop your question, get a tailored growth answer.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='%23fff' text-anchor='middle'%3EH%C2%B2%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#000; --fg:#fff; --muted:rgba(255,255,255,.62); --dim:rgba(255,255,255,.38);
+    --line:rgba(255,255,255,.12);
+    --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+    --sans:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{min-height:100%;background:var(--bg);color:var(--fg);font-family:var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  body{overflow-x:hidden}
+  #bg{position:fixed;inset:0;z-index:0;display:block}
+  .vignette{position:fixed;inset:0;z-index:1;pointer-events:none;
+    background:radial-gradient(ellipse at center,rgba(0,0,0,0) 35%,rgba(0,0,0,.78) 100%)}
+  .grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+  .page{position:relative;z-index:2;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
+  header{display:flex;align-items:center;justify-content:space-between;padding:28px clamp(20px,4vw,56px)}
+  .logo{font-family:var(--serif);font-size:28px;letter-spacing:-.01em;text-decoration:none;color:var(--fg);display:flex;align-items:baseline;gap:1px}
+  .logo sup{font-size:.62em;position:relative;top:-.15em}
+  .nav-cta{font-size:14px;color:var(--fg);text-decoration:none;padding:9px 16px;border:1px solid var(--line);border-radius:999px;transition:border-color .25s,background .25s;backdrop-filter:blur(6px)}
+  .nav-cta:hover{border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.05)}
+
+  main{flex:1;display:flex;align-items:center;justify-content:center;padding:40px clamp(20px,4vw,56px) 60px}
+  .shell{width:min(760px,100%);text-align:center}
+
+  .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);margin-bottom:24px;
+    display:inline-flex;align-items:center;gap:12px}
+  .eyebrow::before,.eyebrow::after{content:"";width:28px;height:1px;background:var(--line)}
+  h1{font-family:var(--serif);font-weight:400;letter-spacing:-.025em;line-height:1.02;
+    font-size:clamp(44px,6.6vw,78px);max-width:16ch;margin:0 auto;text-wrap:balance}
+  h1 em{font-style:italic;color:rgba(255,255,255,.9)}
+  .sub{margin:22px auto 0;max-width:52ch;font-size:clamp(15px,1.2vw,18px);line-height:1.55;color:var(--muted);text-wrap:pretty}
+  .sub strong{color:var(--fg);font-weight:500}
+
+  form{margin:40px auto 0;width:min(560px,100%);display:flex;flex-direction:column;gap:14px;text-align:left}
+  .field{display:flex;flex-direction:column;gap:8px}
+  label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+  input[type=email],textarea{
+    width:100%;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;
+    color:var(--fg);font:inherit;font-size:15px;padding:14px 16px;outline:none;
+    backdrop-filter:blur(10px);transition:border-color .2s,background .2s,box-shadow .2s
+  }
+  textarea{min-height:140px;resize:vertical;line-height:1.5}
+  input::placeholder,textarea::placeholder{color:rgba(255,255,255,.32)}
+  input:focus,textarea:focus{border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.06);box-shadow:0 0 0 4px rgba(255,255,255,.05)}
+
+  .hp{position:absolute;left:-9999px;top:-9999px;height:0;width:0;opacity:0}
+
+  .row{display:flex;gap:14px;align-items:center;justify-content:space-between;margin-top:8px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font-size:15px;font-weight:500;text-decoration:none;cursor:pointer;border:0;
+    background:var(--fg);color:#000;transition:transform .25s,box-shadow .25s,opacity .25s;box-shadow:0 0 0 0 rgba(255,255,255,0)}
+  .btn:hover{transform:translateY(-1px);box-shadow:0 0 40px rgba(255,255,255,.25)}
+  .btn[disabled]{opacity:.55;cursor:not-allowed;transform:none;box-shadow:none}
+  .btn svg{width:16px;height:16px;transition:transform .25s}
+  .btn:hover svg{transform:translate(2px,-2px)}
+  .micro{font-size:12.5px;color:var(--dim);max-width:36ch;line-height:1.5}
+
+  .status{margin-top:18px;min-height:22px;font-size:14px;color:var(--muted)}
+  .status.ok{color:#9bffb0}
+  .status.err{color:#ff9b9b}
+
+  .success{margin-top:36px;padding:28px 24px;border:1px solid rgba(255,255,255,.14);border-radius:16px;background:rgba(255,255,255,.04);backdrop-filter:blur(10px);display:none}
+  .success.show{display:block;animation:up .6s cubic-bezier(.2,.7,.2,1) forwards}
+  .success h2{font-family:var(--serif);font-weight:400;font-size:clamp(28px,4vw,40px);letter-spacing:-.02em;line-height:1.05}
+  .success p{margin-top:10px;color:var(--muted);font-size:15px;line-height:1.55}
+
+  footer{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px clamp(20px,4vw,56px);font-size:12.5px;color:var(--dim);border-top:1px solid rgba(255,255,255,.06)}
+  footer a{color:var(--dim);text-decoration:none}
+  footer a:hover{color:var(--fg)}
+
+  .reveal{opacity:0;transform:translateY(14px);animation:up .9s cubic-bezier(.2,.7,.2,1) forwards}
+  .d1{animation-delay:.08s}.d2{animation-delay:.22s}.d3{animation-delay:.36s}.d4{animation-delay:.5s}
+  @keyframes up{to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.reveal{animation:none;opacity:1;transform:none}}
+
+  @media (max-width:640px){
+    header{padding:20px}
+    .logo{font-size:24px}
+    main{padding:28px 20px 48px}
+    h1{font-size:clamp(36px,10vw,52px)}
+    .sub{margin-top:18px;font-size:15px}
+    form{margin-top:30px}
+    .row{flex-direction:column;align-items:stretch}
+    .btn{justify-content:center}
+    footer{flex-direction:column;align-items:flex-start;gap:8px}
+  }
+</style>
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="vignette" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="page">
+  <header>
+    <a class="logo" href="/" aria-label="Humans squared">Humans<sup>2</sup></a>
+    <a class="nav-cta" href="mailto:hello@humans2.ai?subject=Growth%20call%20with%20humans2">Book a call</a>
+  </header>
+
+  <main>
+    <div class="shell">
+      <div id="formView">
+        <div class="eyebrow reveal d1">Private intake · for serious operators</div>
+        <h1 class="reveal d2">Ask us <em>anything</em> about growth.</h1>
+        <p class="sub reveal d3">
+          Drop your question — paid acquisition, creatives, funnels, ASO, LTV, scale walls — and
+          we'll come back with a <strong>tailored, specific answer</strong>, not a template.
+        </p>
+
+        <form id="leadForm" class="reveal d4" novalidate>
+          <div class="field">
+            <label for="email">Your email</label>
+            <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@company.com">
+          </div>
+
+          <div class="field">
+            <label for="question">Your question</label>
+            <textarea id="question" name="question" required maxlength="2000" placeholder="e.g. We're spending $80k/mo on Meta for our consumer app, CPA plateaued at $32. What would you test next?"></textarea>
+          </div>
+
+          <!-- honeypot -->
+          <div class="hp" aria-hidden="true">
+            <label for="company">Company (leave empty)</label>
+            <input id="company" name="company" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="row">
+            <p class="micro">We read every question. Reply within <strong>1 business day</strong>, usually faster.</p>
+            <button class="btn" type="submit" id="submitBtn">
+              Send question
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12 12 4M6 4h6v6"/></svg>
+            </button>
+          </div>
+          <div class="status" id="status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+
+      <div class="success" id="success" aria-hidden="true">
+        <h2>Got it. We're on it.</h2>
+        <p>Your question is in our inbox. Expect a thoughtful reply from the humans² team — usually within a few hours, no later than one business day. Meanwhile, you can <a href="mailto:hello@humans2.ai" style="color:#fff">reply directly</a> if anything else comes up.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div>© 2026 Humans² · Human taste. Machine speed.</div>
+    <div><a href="mailto:hello@humans2.ai">hello@humans2.ai</a></div>
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+<script>
+// Lightweight version of the main canvas: single calm sphere, no particle rings — focus stays on the form.
+(function(){
+  if(!window.THREE) return;
+  var canvas=document.getElementById('bg');
+  var renderer;
+  try{ renderer=new THREE.WebGLRenderer({canvas:canvas,antialias:true,alpha:true,powerPreference:'high-performance'}); }
+  catch(e){ canvas.style.display='none'; return; }
+  var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
+  var scene=new THREE.Scene();
+  scene.fog=new THREE.FogExp2(0x000000,0.11);
+  var camera=new THREE.PerspectiveCamera(55,1,0.1,100);
+  camera.position.set(0,0,9);
+
+  var group=new THREE.Group(); scene.add(group);
+  var outer=new THREE.Mesh(new THREE.IcosahedronGeometry(3.6,2),
+    new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true,transparent:true,opacity:0.055}));
+  group.add(outer);
+  var core=new THREE.Mesh(new THREE.IcosahedronGeometry(1.4,1),
+    new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true,transparent:true,opacity:0.18}));
+  group.add(core);
+
+  (function(){
+    var n=1000,pos=new Float32Array(n*3);
+    for(var i=0;i<n;i++){pos[i*3]=(Math.random()-0.5)*60;pos[i*3+1]=(Math.random()-0.5)*40;pos[i*3+2]=-10-Math.random()*40;}
+    var g=new THREE.BufferGeometry(); g.setAttribute('position',new THREE.BufferAttribute(pos,3));
+    scene.add(new THREE.Points(g,new THREE.PointsMaterial({color:0xffffff,size:0.05,transparent:true,opacity:0.4,depthWrite:false})));
+  })();
+
+  var mx=0,my=0,tx=0,ty=0;
+  window.addEventListener('pointermove',function(e){tx=(e.clientX/window.innerWidth-0.5);ty=(e.clientY/window.innerHeight-0.5);},{passive:true});
+  function resize(){var w=window.innerWidth,h=window.innerHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();
+    group.position.y = w<640 ? 0.4 : 0; group.scale.setScalar(w<640?0.75:0.95);}
+  window.addEventListener('resize',resize); resize();
+
+  var t0=performance.now();
+  function frame(now){
+    var t=(now-t0)/1000;
+    mx+=(tx-mx)*0.04; my+=(ty-my)*0.04;
+    if(!reduced){
+      outer.rotation.y=t*0.04; outer.rotation.x=Math.sin(t*0.07)*0.18;
+      core.rotation.y=-t*0.14; core.rotation.z=t*0.08;
+    }
+    group.rotation.y+= (mx*0.5-group.rotation.y)*0.05;
+    group.rotation.x+= (my*0.3-group.rotation.x)*0.05;
+    renderer.render(scene,camera);
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Form handler: POST to /api/lead, fall back to mailto if the function isn't deployed yet.
+(function(){
+  var form=document.getElementById('leadForm');
+  var status=document.getElementById('status');
+  var btn=document.getElementById('submitBtn');
+  var formView=document.getElementById('formView');
+  var success=document.getElementById('success');
+
+  function setStatus(msg,kind){
+    status.textContent=msg||'';
+    status.className='status'+(kind?' '+kind:'');
+  }
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    var email=document.getElementById('email').value.trim();
+    var question=document.getElementById('question').value.trim();
+    var honeypot=document.getElementById('company').value.trim();
+
+    if(honeypot){ // bot
+      showSuccess(); return;
+    }
+    if(!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+      setStatus('Please enter a valid email.','err'); return;
+    }
+    if(question.length<10){
+      setStatus('Add a bit more detail about your question (10+ characters).','err'); return;
+    }
+
+    btn.disabled=true;
+    setStatus('Sending…');
+
+    var payload={email:email,question:question,source:'lead-magnet',ts:new Date().toISOString()};
+
+    try{
+      var r=await fetch('/api/lead',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(payload)
+      });
+      if(r.ok){ showSuccess(); return; }
+      // if endpoint isn't there, fall through to mailto fallback
+      throw new Error('bad status '+r.status);
+    }catch(err){
+      // Fallback: open mail client with pre-filled body so the lead isn't lost.
+      var subject=encodeURIComponent('humans² question from '+email);
+      var body=encodeURIComponent(question+'\n\n— sent from humans2.ai lead-magnet form');
+      window.location.href='mailto:hello@humans2.ai?subject='+subject+'&body='+body;
+      setStatus('Opening your mail client as a backup — your question will be sent to hello@humans2.ai.','ok');
+      btn.disabled=false;
+    }
+  });
+
+  function showSuccess(){
+    formView.style.display='none';
+    success.classList.add('show');
+    success.setAttribute('aria-hidden','false');
+    try{ history.replaceState(null,'',location.pathname+'?sent=1'); }catch(e){}
+  }
+})();
+</script>
+</body>
+</html>
