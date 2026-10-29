@@ -5,11 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Viktor.com paid acquisition teardown · by humans²</title>
 <meta name="description" content="A full teardown of Viktor.com's $830 live-ad Meta machine: 2,000 ads, 1,119 copies of their #1 concept, every angle, LP and creative pattern — unpacked by humans².">
-<!-- Unlisted: not linked from the site, but shareable so LinkedIn/Twitter can render preview cards. -->
 <meta name="robots" content="nofollow">
 <link rel="canonical" href="https://humans2.ai/lead-magnet">
 
-<!-- Open Graph -->
 <meta property="og:site_name" content="humans²">
 <meta property="og:title" content="Viktor.com paid acquisition teardown · by humans²">
 <meta property="og:description" content="2,000 ads, 1,119 copies of one winning concept, 60% of hooks swapped in 90 days. Full Meta Ad Library teardown. Enter your email, read it in-browser.">
@@ -22,186 +20,247 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Viktor.com paid acquisition teardown — a humans² competitor teardown">
-
-<!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Viktor.com paid acquisition teardown · by humans²">
-<meta name="twitter:description" content="2,000 ads · 1,119 copies of the #1 concept · 60%+ hook turnover in 90 days. Full Meta Ad Library teardown.">
+<meta name="twitter:description" content="2,000 ads · 1,119 copies of the #1 concept · 60%+ hook turnover in 90 days.">
 <meta name="twitter:image" content="https://humans2.ai/og/lead-magnet.png">
-<meta name="twitter:image:alt" content="Viktor.com paid acquisition teardown — a humans² competitor teardown">
 
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Viktor.com paid acquisition teardown",
-  "description": "A full teardown of Viktor.com's Meta ad machine: 2,000 ads, 1,119 copies of their #1 concept, every angle, LP and creative pattern.",
-  "image": "https://humans2.ai/og/lead-magnet.png",
-  "author": { "@type": "Organization", "name": "humans²", "url": "https://humans2.ai" },
-  "publisher": {
-    "@type": "Organization",
-    "name": "humans²",
-    "url": "https://humans2.ai",
-    "logo": { "@type": "ImageObject", "url": "https://humans2.ai/og/lead-magnet.png" }
-  },
-  "datePublished": "2026-10-29",
-  "inLanguage": "en",
-  "mainEntityOfPage": "https://humans2.ai/lead-magnet"
-}
+{"@context":"https://schema.org","@type":"Article","headline":"Viktor.com paid acquisition teardown","description":"A full teardown of Viktor.com's Meta ad machine.","image":"https://humans2.ai/og/lead-magnet.png","author":{"@type":"Organization","name":"humans²","url":"https://humans2.ai"},"publisher":{"@type":"Organization","name":"humans²","url":"https://humans2.ai","logo":{"@type":"ImageObject","url":"https://humans2.ai/og/lead-magnet.png"}},"datePublished":"2026-10-29","inLanguage":"en","mainEntityOfPage":"https://humans2.ai/lead-magnet"}
 </script>
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='%23fff' text-anchor='middle'%3EH%C2%B2%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#000; --fg:#fff; --muted:rgba(255,255,255,.62); --dim:rgba(255,255,255,.38);
-    --line:rgba(255,255,255,.12); --soft:rgba(255,255,255,.04);
-    --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+    --bg:#000; --fg:#fff; --muted:rgba(255,255,255,.62); --dim:rgba(255,255,255,.38); --line:rgba(255,255,255,.12);
+    --serif:"Instrument Serif",Georgia,serif;
     --sans:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    /* Deck palette */
+    --paper:#ffffff; --ink:#0a0a0a; --soft-ink:#333;
+    --gray-50:#f6f6f5; --gray-100:#eceae5; --gray-300:#c8c6c0; --gray-500:#8a8780; --gray-700:#4a4842;
+    --accent:#5b2fd6;   /* purple */
+    --accent-soft:#efeaff;
+    --warm:#e9a94a;     /* amber */
+    --good:#2f9d6f;     /* green */
+    --bad:#c7483c;      /* red */
+    --cover-bg:#0a0a0a;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   html,body{min-height:100%;background:var(--bg);color:var(--fg);font-family:var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
   body{overflow-x:hidden}
+
+  /* ================= GATE (dark humans² hero) ================= */
   #bg{position:fixed;inset:0;z-index:0;display:block}
-  .vignette{position:fixed;inset:0;z-index:1;pointer-events:none;
-    background:radial-gradient(ellipse at center,rgba(0,0,0,0) 35%,rgba(0,0,0,.78) 100%)}
+  .vignette{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 35%,rgba(0,0,0,.78) 100%)}
   .grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 
-  .page{position:relative;z-index:2;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
-  header{display:flex;align-items:center;justify-content:space-between;padding:28px clamp(20px,4vw,56px)}
-  .logo{font-family:var(--serif);font-size:28px;letter-spacing:-.01em;text-decoration:none;color:var(--fg);display:flex;align-items:baseline;gap:1px}
-  .logo sup{font-size:.62em;position:relative;top:-.15em}
-  .nav-cta{font-size:14px;color:var(--fg);text-decoration:none;padding:9px 16px;border:1px solid var(--line);border-radius:999px;transition:border-color .25s,background .25s;backdrop-filter:blur(6px)}
-  .nav-cta:hover{border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.05)}
-
-  main{flex:1}
-
-  /* ========== GATE (shown before email) ========== */
-  .gate{display:flex;align-items:center;justify-content:center;padding:40px clamp(20px,4vw,56px) 80px;min-height:calc(100vh - 88px);min-height:calc(100dvh - 88px)}
+  .gate{position:relative;z-index:2;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
+  .gate header{display:flex;align-items:center;justify-content:space-between;padding:28px clamp(20px,4vw,56px)}
+  .gate .logo{font-family:var(--serif);font-size:28px;color:var(--fg);text-decoration:none;display:flex;align-items:baseline;gap:1px}
+  .gate .logo sup{font-size:.62em;position:relative;top:-.15em}
+  .gate .nav-cta{font-size:14px;color:var(--fg);text-decoration:none;padding:9px 16px;border:1px solid var(--line);border-radius:999px;backdrop-filter:blur(6px)}
+  .gate .nav-cta:hover{border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.05)}
+  .gate-main{flex:1;display:flex;align-items:center;justify-content:center;padding:40px clamp(20px,4vw,56px) 80px}
   .gate-shell{width:min(760px,100%);text-align:center}
-  .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);margin-bottom:24px;
-    display:inline-flex;align-items:center;gap:12px}
+  .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);margin-bottom:24px;display:inline-flex;align-items:center;gap:12px}
   .eyebrow::before,.eyebrow::after{content:"";width:28px;height:1px;background:var(--line)}
-  .gate h1{font-family:var(--serif);font-weight:400;letter-spacing:-.025em;line-height:1.02;
-    font-size:clamp(42px,6.4vw,76px);max-width:18ch;margin:0 auto;text-wrap:balance}
+  .gate h1{font-family:var(--serif);font-weight:400;letter-spacing:-.025em;line-height:1.02;font-size:clamp(42px,6.4vw,76px);max-width:18ch;margin:0 auto;text-wrap:balance}
   .gate h1 em{font-style:italic;color:rgba(255,255,255,.9)}
   .gate .sub{margin:22px auto 0;max-width:56ch;font-size:clamp(15px,1.2vw,18px);line-height:1.55;color:var(--muted);text-wrap:pretty}
   .gate .sub strong{color:var(--fg);font-weight:500}
-
   .stat-strip{margin:36px auto 0;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 32px;max-width:620px}
   .stat-strip div{display:flex;flex-direction:column;align-items:center;min-width:120px}
   .stat-strip b{font-family:var(--serif);font-weight:400;font-size:clamp(28px,4vw,38px);line-height:1}
   .stat-strip small{margin-top:6px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
-
   form{margin:40px auto 0;width:min(480px,100%);display:flex;flex-direction:column;gap:14px;text-align:left}
   .field{display:flex;flex-direction:column;gap:8px}
   label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
-  input[type=email]{
-    width:100%;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;
-    color:var(--fg);font:inherit;font-size:15px;padding:14px 16px;outline:none;
-    backdrop-filter:blur(10px);transition:border-color .2s,background .2s,box-shadow .2s
-  }
+  input[type=email]{width:100%;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;color:var(--fg);font:inherit;font-size:15px;padding:14px 16px;outline:none;backdrop-filter:blur(10px)}
   input::placeholder{color:rgba(255,255,255,.32)}
   input:focus{border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.06);box-shadow:0 0 0 4px rgba(255,255,255,.05)}
   .hp{position:absolute;left:-9999px;top:-9999px;height:0;width:0;opacity:0}
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:999px;font-size:15px;font-weight:500;text-decoration:none;cursor:pointer;border:0;
-    background:var(--fg);color:#000;transition:transform .25s,box-shadow .25s,opacity .25s;box-shadow:0 0 0 0 rgba(255,255,255,0);width:100%}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:999px;font-size:15px;font-weight:500;text-decoration:none;cursor:pointer;border:0;background:var(--fg);color:#000;width:100%;transition:transform .25s,box-shadow .25s}
   .btn:hover{transform:translateY(-1px);box-shadow:0 0 40px rgba(255,255,255,.25)}
-  .btn[disabled]{opacity:.55;cursor:not-allowed;transform:none;box-shadow:none}
-  .btn svg{width:16px;height:16px;transition:transform .25s}
-  .btn:hover svg{transform:translate(2px,-2px)}
+  .btn[disabled]{opacity:.55;cursor:not-allowed}
+  .btn svg{width:16px;height:16px}
   .micro{font-size:12.5px;color:var(--dim);line-height:1.5;text-align:center;margin-top:6px}
   .status{margin-top:8px;min-height:22px;font-size:14px;color:var(--muted);text-align:center}
-  .status.ok{color:#9bffb0}
-  .status.err{color:#ff9b9b}
-
-  /* ========== TEARDOWN (shown after email) ========== */
-  .teardown{display:none;padding:60px clamp(20px,4vw,56px) 100px}
-  .teardown.show{display:block;animation:fadeIn .8s ease forwards}
-  @keyframes fadeIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-
-  .doc{width:min(960px,100%);margin:0 auto}
-  .cover{text-align:center;padding:30px 0 60px;border-bottom:1px solid var(--line);margin-bottom:60px}
-  .cover .kicker{font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--dim);margin-bottom:24px}
-  .cover h1{font-family:var(--serif);font-weight:400;letter-spacing:-.03em;line-height:.98;font-size:clamp(52px,9vw,120px)}
-  .cover h1 em{font-style:italic}
-  .cover .tag{margin-top:28px;font-family:var(--serif);font-style:italic;color:var(--muted);font-size:clamp(18px,2vw,24px)}
-
-  .section{margin:72px 0;scroll-margin-top:40px}
-  .section .label{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--dim);margin-bottom:14px}
-  .section h2{font-family:var(--serif);font-weight:400;letter-spacing:-.025em;line-height:1.02;font-size:clamp(32px,4.5vw,52px);max-width:22ch;text-wrap:balance}
-  .section .lede{margin-top:16px;color:var(--muted);font-size:clamp(16px,1.3vw,19px);line-height:1.55;max-width:60ch;text-wrap:pretty}
-
-  .kpi{margin-top:34px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-  .kpi .card{padding:22px 20px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.02));backdrop-filter:blur(10px)}
-  .kpi .n{font-family:var(--serif);font-size:clamp(34px,4.4vw,46px);line-height:1;letter-spacing:-.01em}
-  .kpi .k{margin-top:10px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
-  .kpi .d{margin-top:10px;font-size:13.5px;line-height:1.5;color:var(--muted);max-width:30ch}
-
-  .tldr{margin-top:34px;display:grid;gap:10px}
-  .tldr .row{display:flex;gap:16px;padding:16px 20px;border:1px solid var(--line);border-radius:12px;background:var(--soft)}
-  .tldr .n{font-family:var(--serif);font-size:28px;line-height:1;color:var(--dim);min-width:48px;letter-spacing:-.01em}
-  .tldr .t{font-size:15px;line-height:1.55;color:rgba(255,255,255,.86)}
-  .tldr .t strong{color:var(--fg);font-weight:500}
-
-  .tbl{margin-top:34px;overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--soft)}
-  table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:560px}
-  thead th{text-align:left;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);font-weight:500;padding:14px 16px;border-bottom:1px solid var(--line);white-space:nowrap}
-  tbody td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05);color:var(--muted);vertical-align:top}
-  tbody td:first-child{color:var(--fg);font-weight:500}
-  tbody tr:last-child td{border-bottom:0}
-  tbody td.num{font-variant-numeric:tabular-nums;color:rgba(255,255,255,.86)}
-
-  .quote{margin-top:34px;padding:28px 28px 24px;border:1px solid var(--line);border-radius:14px;background:var(--soft)}
-  .quote .q{font-family:var(--serif);font-style:italic;font-size:clamp(18px,1.8vw,22px);line-height:1.4;color:rgba(255,255,255,.9)}
-  .quote .meta{margin-top:14px;font-size:12px;color:var(--dim);letter-spacing:.08em;text-transform:uppercase}
-
-  .cards{margin-top:34px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-  .ad-card{padding:22px 22px 20px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015));backdrop-filter:blur(10px)}
-  .ad-card .fmt{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin-bottom:12px}
-  .ad-card .q{font-family:var(--serif);font-size:18px;line-height:1.35;color:#fff}
-  .ad-card .meta{margin-top:14px;font-size:12.5px;color:var(--muted);line-height:1.5}
-  .ad-card .meta a{color:#fff;text-decoration:none;border-bottom:1px solid var(--line)}
-  .ad-card .meta a:hover{border-color:#fff}
-
-  .angles{margin-top:28px;display:grid;gap:10px}
-  .angle{padding:18px 22px;border:1px solid var(--line);border-radius:12px;background:var(--soft);display:grid;gap:8px}
-  .angle .a-name{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
-  .angle .a-q{font-family:var(--serif);font-size:17px;line-height:1.4;color:#fff}
-  .angle .a-s{font-size:13px;color:var(--muted)}
-
-  .cta-block{margin-top:72px;padding:48px 44px 44px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));text-align:center}
-  .cta-block h3{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.6vw,44px);letter-spacing:-.02em;line-height:1.05;max-width:22ch;margin:0 auto}
-  .cta-block p{margin:16px auto 0;max-width:52ch;color:var(--muted);font-size:16px;line-height:1.55}
-  .cta-block .cta{margin-top:28px;display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap}
-
-  footer{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px clamp(20px,4vw,56px);font-size:12.5px;color:var(--dim);border-top:1px solid rgba(255,255,255,.06)}
-  footer a{color:var(--dim);text-decoration:none}
-  footer a:hover{color:var(--fg)}
-
+  .status.ok{color:#9bffb0} .status.err{color:#ff9b9b}
+  .gate footer{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px clamp(20px,4vw,56px);font-size:12.5px;color:var(--dim);border-top:1px solid rgba(255,255,255,.06)}
+  .gate footer a{color:var(--dim);text-decoration:none}
+  .gate footer a:hover{color:var(--fg)}
   .reveal{opacity:0;transform:translateY(14px);animation:up .9s cubic-bezier(.2,.7,.2,1) forwards}
   .d1{animation-delay:.08s}.d2{animation-delay:.22s}.d3{animation-delay:.36s}.d4{animation-delay:.5s}.d5{animation-delay:.64s}
   @keyframes up{to{opacity:1;transform:none}}
-  @media (prefers-reduced-motion:reduce){.reveal{animation:none;opacity:1;transform:none}}
 
+  /* ================= TEARDOWN (PDF-deck light pages) ================= */
+  .teardown{display:none;background:var(--paper);color:var(--ink);font-family:var(--sans);position:relative;z-index:5}
+  .teardown.show{display:block;animation:fadeIn .6s ease}
+  @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+  .deck{width:min(1100px,100%);margin:0 auto;padding:0 clamp(24px,4vw,56px)}
+  .page{position:relative;padding:48px 0 56px;border-bottom:1px solid var(--gray-100)}
+  .page:last-of-type{border-bottom:0}
+  .page .pg-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gray-500);font-weight:500}
+  .page .pg-foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--gray-100);display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:11px;color:var(--gray-500)}
+  .page .pg-foot .pn{font-weight:500;color:var(--ink)}
+
+  /* Section labels (purple caps) */
+  .cap{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600}
+  .cap.gr{color:var(--good)}
+  .cap.rd{color:var(--bad)}
+  .cap.wr{color:var(--warm)}
+
+  /* Big headlines */
+  .h-xl{font-family:var(--sans);font-weight:700;font-size:clamp(44px,6vw,76px);line-height:1;letter-spacing:-.025em;color:var(--ink);text-wrap:balance}
+  .h-lg{font-family:var(--sans);font-weight:700;font-size:clamp(32px,4.4vw,54px);line-height:1.02;letter-spacing:-.02em;color:var(--ink);text-wrap:balance}
+  .h-lg .mute{color:var(--gray-500);font-weight:400}
+  .lede{margin-top:16px;color:var(--gray-700);font-size:clamp(15px,1.3vw,18px);line-height:1.5;max-width:68ch;text-wrap:pretty}
+  .lede .em{color:var(--ink);font-weight:600}
+
+  /* ---- COVER (dark page) ---- */
+  .cover{background:var(--cover-bg);color:#f3efe6;margin:0 -1000px;padding:0 1000px}
+  .cover-inner{min-height:72vh;padding:56px 0;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+  .cover-inner::after{content:"";position:absolute;top:-10%;right:-15%;width:72%;height:120%;background:radial-gradient(circle,rgba(107,63,240,.55),rgba(107,63,240,0) 60%);pointer-events:none}
+  .cover-head,.cover-foot{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:baseline;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(243,239,230,.55);font-weight:500}
+  .cover-foot{border-top:1px solid rgba(255,255,255,.1);padding-top:16px}
+  .cover-body{position:relative;z-index:2;padding:48px 0}
+  .cover-title{font-family:var(--sans);font-weight:800;font-size:clamp(72px,13vw,160px);line-height:.95;letter-spacing:-.04em;color:#f3efe6}
+  .cover-sub{margin-top:28px;font-weight:500;font-size:clamp(22px,2.6vw,36px);line-height:1.1;color:#f3efe6}
+  .cover-sub .mute{color:rgba(243,239,230,.55);font-weight:400}
+
+  /* ---- KPI grid (page 03 style) ---- */
+  .kpi-grid{margin-top:40px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--gray-100)}
+  .kpi-cell{padding:28px 24px 24px;border-right:1px solid var(--gray-100);border-bottom:1px solid var(--gray-100)}
+  .kpi-cell:nth-child(3n){border-right:0}
+  .kpi-cell:nth-last-child(-n+3){border-bottom:0}
+  .kpi-cell .k{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gray-500);font-weight:600}
+  .kpi-cell .n{margin-top:18px;font-family:var(--sans);font-weight:300;font-size:clamp(44px,5.4vw,64px);line-height:1;letter-spacing:-.02em;color:var(--ink)}
+  .kpi-cell .d{margin-top:14px;font-size:13px;line-height:1.5;color:var(--gray-700);max-width:28ch}
+
+  /* ---- TL;DR list (page 04 style) ---- */
+  .tldr{margin-top:40px;border-top:1px solid var(--gray-100)}
+  .tldr .row{display:flex;gap:28px;padding:22px 0;border-bottom:1px solid var(--gray-100);align-items:baseline}
+  .tldr .n{font-family:var(--sans);font-weight:300;color:var(--accent);font-size:28px;letter-spacing:-.01em;min-width:52px;line-height:1}
+  .tldr .t{font-size:16px;line-height:1.55;color:var(--gray-700)}
+  .tldr .t strong{color:var(--ink);font-weight:600}
+
+  /* ---- Two-col section (page 05 style) ---- */
+  .two-col{margin-top:36px;display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  .two-col .col > .cap{margin-bottom:16px;display:block}
+
+  /* Country table (compact bordered) */
+  .ltable{width:100%;border-collapse:collapse;font-size:14px}
+  .ltable tr{border-bottom:1px solid var(--gray-100)}
+  .ltable tr:first-child{border-top:1px solid var(--gray-100)}
+  .ltable td{padding:14px 0;color:var(--ink)}
+  .ltable td.num{text-align:right;font-variant-numeric:tabular-nums;font-weight:500}
+  .ltable tr.total td{font-weight:700;border-top:2px solid var(--ink)}
+
+  /* Vertical stacked bullets (How they ship) */
+  .stacks{display:flex;flex-direction:column}
+  .stacks .s{padding:18px 0;border-bottom:1px solid var(--gray-100);font-size:14.5px;line-height:1.5}
+  .stacks .s:first-child{border-top:1px solid var(--gray-100)}
+  .stacks .s strong{display:block;font-weight:700;color:var(--ink);margin-bottom:4px}
+  .stacks .s span{color:var(--gray-700)}
+
+  /* ---- Data matrix (page 06/07/08/09/10 style) ---- */
+  .matrix-wrap{margin-top:36px;overflow-x:auto}
+  .matrix{width:100%;border-collapse:collapse;font-size:13.5px;min-width:620px}
+  .matrix thead th{text-align:right;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gray-500);font-weight:600;padding:12px 10px;border-bottom:1px solid var(--gray-300);white-space:nowrap}
+  .matrix thead th:first-child{text-align:left}
+  .matrix tbody td{padding:14px 10px;border-bottom:1px solid var(--gray-100);text-align:right;font-variant-numeric:tabular-nums;color:var(--ink)}
+  .matrix tbody td:first-child{text-align:left;font-weight:500}
+  .matrix tbody tr:last-child td{border-bottom:0}
+  .matrix td.hi-g{color:var(--good);font-weight:700}
+  .matrix td.hi-r{color:var(--bad);font-weight:700}
+  .matrix td.hi-w{color:var(--warm);font-weight:700}
+  .matrix td.hi-i{color:var(--ink);font-weight:700}
+  .matrix td.dim{color:var(--gray-500)}
+  .matrix tfoot td,.matrix tr.sum td{font-weight:700;color:var(--ink);border-top:2px solid var(--ink);padding-top:14px}
+  .foot-note{margin-top:14px;font-size:11.5px;color:var(--gray-500);line-height:1.5}
+
+  /* ---- Three-stat row (page 07/08 bottom) ---- */
+  .three-stats{margin-top:36px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--gray-300)}
+  .three-stats .s{padding:28px 24px 0;border-right:1px solid var(--gray-100)}
+  .three-stats .s:last-child{border-right:0}
+  .three-stats .s .cap{display:block;margin-bottom:0}
+  .three-stats .s .n{margin-top:14px;font-family:var(--sans);font-weight:300;font-size:clamp(32px,4vw,46px);line-height:1;color:var(--ink);letter-spacing:-.02em}
+  .three-stats .s .d{margin-top:12px;color:var(--gray-700);font-size:13.5px;line-height:1.5;max-width:30ch}
+
+  /* ---- Angles table (page 11) ---- */
+  .angles-tbl{width:100%;border-collapse:collapse;margin-top:36px;font-size:14px}
+  .angles-tbl thead th{text-align:left;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gray-500);font-weight:600;padding:12px 14px 12px 0;border-bottom:1px solid var(--gray-300);white-space:nowrap}
+  .angles-tbl tbody td{padding:18px 14px 18px 0;border-bottom:1px solid var(--gray-100);vertical-align:top;color:var(--gray-700);line-height:1.5}
+  .angles-tbl tbody td:first-child{color:var(--ink);font-weight:600;width:28%}
+  .angles-tbl tbody td:last-child{width:22%;padding-right:0;color:var(--gray-700)}
+  .angles-tbl .q{color:var(--ink);font-weight:400}
+
+  /* ---- Ad cards (page 12-18) ---- */
+  .ad-grid-2{margin-top:36px;display:grid;grid-template-columns:1fr 1fr;gap:36px}
+  .ad-grid-3{margin-top:36px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+  .ad-card{display:flex;flex-direction:column;gap:16px}
+  .ad-thumb{position:relative;aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:linear-gradient(135deg,var(--gray-100),var(--gray-50));display:flex;align-items:center;justify-content:center;color:var(--gray-500);font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-align:center;padding:20px}
+  .ad-thumb.vd{aspect-ratio:9/16}
+  .ad-thumb.pr{aspect-ratio:4/3}
+  .ad-badge{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,.78);color:#fff;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;padding:6px 10px;border-radius:999px;display:inline-flex;align-items:center;gap:6px;font-weight:600}
+  .ad-badge::before{content:"▶";font-size:9px}
+  .ad-card .label{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600}
+  .ad-card .q{font-size:16px;line-height:1.4;color:var(--ink);font-weight:500}
+  .ad-card .meta{font-size:12.5px;color:var(--gray-500);line-height:1.5}
+  .ad-card .link{font-size:12.5px;color:var(--accent);font-weight:600;text-decoration:none;border-bottom:1px solid var(--accent);align-self:flex-start}
+  .ad-card .link:hover{opacity:.75}
+
+  /* ---- Carousel row (page 18) ---- */
+  .car-row{margin-top:36px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+  .car-card{aspect-ratio:3/5;border-radius:12px;padding:18px;display:flex;flex-direction:column;justify-content:space-between;color:#fff;font-size:12px;line-height:1.3;font-weight:600}
+  .car-card:nth-child(1){background:linear-gradient(165deg,#f4c3c7,#d87f8c)}
+  .car-card:nth-child(2){background:linear-gradient(165deg,#c7bdfd,#7f6ee2)}
+  .car-card:nth-child(3){background:linear-gradient(165deg,#f5e2a3,#d9b74d)}
+  .car-card:nth-child(4){background:linear-gradient(165deg,#f6b58a,#d87842)}
+  .car-card:nth-child(5){background:linear-gradient(165deg,#c3b9e8,#8d7fc0)}
+  .car-card .wm{align-self:flex-start;font-size:10px;letter-spacing:.15em;opacity:.85}
+  .car-card .q{font-size:13.5px;font-weight:600;line-height:1.3}
+  .car-cap{margin-top:12px;font-size:12px;color:var(--gray-500);text-align:center}
+
+  /* ---- Final CTA block (page 02 vibe but inline) ---- */
+  .closing{background:var(--cover-bg);color:#f3efe6;margin:0 -1000px;padding:0 1000px}
+  .closing-inner{padding:80px 0 72px;position:relative;overflow:hidden}
+  .closing-inner::before{content:"";position:absolute;top:-20%;right:-10%;width:60%;height:140%;background:radial-gradient(circle,rgba(107,63,240,.45),rgba(107,63,240,0) 60%);pointer-events:none}
+  .closing-inner > *{position:relative;z-index:2}
+  .closing h2{font-family:var(--sans);font-weight:700;font-size:clamp(40px,5.4vw,64px);line-height:1.03;letter-spacing:-.025em;max-width:16ch}
+  .closing p{margin-top:20px;max-width:52ch;color:rgba(243,239,230,.72);font-size:17px;line-height:1.55}
+  .closing .cta{margin-top:36px}
+  .btn-purple{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;background:var(--accent);color:#fff;font-weight:600;font-size:15px;text-decoration:none;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s}
+  .btn-purple:hover{transform:translateY(-1px);box-shadow:0 10px 40px rgba(91,47,214,.4)}
+
+  /* Responsive */
   @media (max-width:900px){
-    .kpi{grid-template-columns:1fr}
-    .cards{grid-template-columns:1fr}
+    .kpi-grid,.three-stats{grid-template-columns:1fr !important}
+    .kpi-cell{border-right:0 !important}
+    .kpi-cell:nth-last-child(-n+3){border-bottom:1px solid var(--gray-100)}
+    .kpi-cell:last-child{border-bottom:0}
+    .three-stats .s{border-right:0;border-bottom:1px solid var(--gray-100);padding-bottom:20px}
+    .three-stats .s:last-child{border-bottom:0}
+    .two-col{grid-template-columns:1fr;gap:36px}
+    .ad-grid-2,.ad-grid-3{grid-template-columns:1fr}
+    .car-row{grid-template-columns:repeat(2,1fr)}
+    .angles-tbl thead{display:none}
+    .angles-tbl tbody td{display:block;width:100% !important;padding:4px 0;border:0}
+    .angles-tbl tbody tr{display:block;padding:18px 0;border-bottom:1px solid var(--gray-100)}
   }
   @media (max-width:640px){
-    header{padding:20px}
-    .logo{font-size:24px}
-    .gate{padding:28px 20px 60px;min-height:auto}
-    .gate h1{font-size:clamp(34px,10vw,48px)}
-    .gate .sub{font-size:15px}
-    .teardown{padding:40px 20px 64px}
-    .section{margin:52px 0}
-    .cta-block{padding:32px 24px}
-    footer{flex-direction:column;align-items:flex-start;gap:8px}
+    .gate header{padding:20px}
+    .gate-main{padding:28px 20px 60px;min-height:auto}
+    .deck{padding:0 20px}
+    .page{padding:36px 0 40px}
+    .cover,.closing{margin:0 -20px;padding:0 20px}
+    .cover-body{padding:36px 0}
   }
 </style>
 </head>
@@ -210,455 +269,640 @@
 <div class="vignette" aria-hidden="true"></div>
 <div class="grain" aria-hidden="true"></div>
 
-<div class="page">
+<!-- ================= GATE ================= -->
+<section class="gate" id="gate">
   <header>
     <a class="logo" href="/" aria-label="Humans squared">Humans<sup>2</sup></a>
     <a class="nav-cta" href="mailto:hello@humans2.ai?subject=Growth%20call%20with%20humans2">Book a call</a>
   </header>
-
-  <main>
-    <!-- ================= GATE ================= -->
-    <section class="gate" id="gate">
-      <div class="gate-shell">
-        <div class="eyebrow reveal d1">Competitor teardown · October 2026</div>
-        <h1 class="reveal d2">We took apart <em>Viktor.com</em>'s Meta ad machine.</h1>
-        <p class="sub reveal d3">
-          2,000 ads. 1,119 launches of a single concept. 398 new ideas tested in a month. Every angle,
-          landing page, hook and creative — <strong>unpacked frame by frame</strong>. Drop your email, read it now.
-        </p>
-
-        <div class="stat-strip reveal d4">
-          <div><b>~2,000</b><small>ads all-time</small></div>
-          <div><b>~830</b><small>live on Oct 27</small></div>
-          <div><b>1,119</b><small>copies · #1 concept</small></div>
-          <div><b>398</b><small>new / month peak</small></div>
-        </div>
-
-        <form id="leadForm" class="reveal d5" novalidate>
-          <div class="field">
-            <label for="email">Your email</label>
-            <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@company.com">
-          </div>
-          <div class="hp" aria-hidden="true">
-            <label for="company">Company (leave empty)</label>
-            <input id="company" name="company" type="text" tabindex="-1" autocomplete="off">
-          </div>
-          <button class="btn" type="submit" id="submitBtn">
-            Unlock the teardown
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12 12 4M6 4h6v6"/></svg>
-          </button>
-          <p class="micro">No spam. One email, one teardown. Unsubscribe anytime.</p>
-          <div class="status" id="status" role="status" aria-live="polite"></div>
-        </form>
+  <div class="gate-main">
+    <div class="gate-shell">
+      <div class="eyebrow reveal d1">Competitor teardown · October 2026</div>
+      <h1 class="reveal d2">We took apart <em>Viktor.com</em>'s Meta ad machine.</h1>
+      <p class="sub reveal d3">
+        2,000 ads. 1,119 launches of a single concept. 398 new ideas tested in a month. Every angle,
+        landing page, hook and creative — <strong>unpacked frame by frame</strong>. Drop your email, read it now.
+      </p>
+      <div class="stat-strip reveal d4">
+        <div><b>~2,000</b><small>ads all-time</small></div>
+        <div><b>~830</b><small>live on Oct 27</small></div>
+        <div><b>1,119</b><small>copies · #1 concept</small></div>
+        <div><b>398</b><small>new / month peak</small></div>
       </div>
-    </section>
-
-    <!-- ================= TEARDOWN ================= -->
-    <section class="teardown" id="teardown" aria-hidden="true">
-      <div class="doc">
-
-        <div class="cover">
-          <div class="kicker">Competitor Teardown · by humans² · Oct 2026</div>
-          <h1>Viktor<em>.com</em></h1>
-          <div class="tag">Paid acquisition teardown — creatives, angles, funnel.</div>
+      <form id="leadForm" class="reveal d5" novalidate>
+        <div class="field">
+          <label for="email">Your email</label>
+          <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@company.com">
         </div>
-
-        <!-- Scale -->
-        <div class="section">
-          <div class="label">01 · Scale</div>
-          <h2>A high-volume Meta machine.</h2>
-          <p class="lede">
-            An official Viktor page in Meta Ad Library (ID 973849642483367). Two-thirds of their ads serve
-            in the US. Up to 131 copies of a single concept launched in one day.
-          </p>
-          <div class="kpi">
-            <div class="card"><div class="n">~2,000</div><div class="k">Ads all-time</div><div class="d">On the Viktor page in Meta Ad Library.</div></div>
-            <div class="card"><div class="n">~830</div><div class="k">Live on Oct 27</div><div class="d">Two-thirds serve in the US.</div></div>
-            <div class="card"><div class="n">1,119</div><div class="k">#1 concept launches</div><div class="d">The "what's our revenue" Slack demo, Mar – Aug. Up to 131/day.</div></div>
-            <div class="card"><div class="n">~50%</div><div class="k">Video share</div><div class="d">39–61% by month. Rest: statics and 4–5 card carousels.</div></div>
-            <div class="card"><div class="n">398</div><div class="k">New concepts · Sep</div><div class="d">Up from 10/month in May–June.</div></div>
-            <div class="card"><div class="n">$100</div><div class="k">Free credits, no card</div><div class="d">Stated offer. Team plan $100/mo.</div></div>
-          </div>
+        <div class="hp" aria-hidden="true">
+          <label for="company">Company (leave empty)</label>
+          <input id="company" name="company" type="text" tabindex="-1" autocomplete="off">
         </div>
-
-        <!-- TL;DR -->
-        <div class="section">
-          <div class="label">02 · TL;DR</div>
-          <h2>Eight things to steal.</h2>
-          <div class="tldr">
-            <div class="row"><div class="n">01</div><div class="t"><strong>Volume over precision.</strong> ~2,000 ads all-time, ~830 live on Oct 27, up to 398 new concepts in a month.</div></div>
-            <div class="row"><div class="n">02</div><div class="t"><strong>US-first.</strong> Oct 27: US ~570 live, UK ~150, CA ~150, AU ~140, IE/DE ~42, India 0.</div></div>
-            <div class="row"><div class="n">03</div><div class="t"><strong>Broad audiences, creative does the segmenting.</strong> EU sample ad: 25–65+, all genders, 142,628 reached in 12 days.</div></div>
-            <div class="row"><div class="n">04</div><div class="t"><strong>One winning concept, scaled hard.</strong> The revenue + pipeline Slack demo: 1,119 launches, up to 131/day.</div></div>
-            <div class="row"><div class="n">05</div><div class="t"><strong>Two machines.</strong> Spring: clone three winners. From July: test 189–398 new concepts a month, Sign Up CTA.</div></div>
-            <div class="row"><div class="n">06</div><div class="t"><strong>Priced against a salary, not software.</strong> "$90K ops role", "$117K ops hire", "$15k agency quote".</div></div>
-            <div class="row"><div class="n">07</div><div class="t"><strong>Creators + affiliates as a second channel.</strong> Ali Abdaal, Mina Elias, Mitch Conquer, plus ref.viktor.com.</div></div>
-            <div class="row"><div class="n">08</div><div class="t"><strong>Low-friction offer.</strong> Homepage → $100 in free credits, no card required.</div></div>
-          </div>
-        </div>
-
-        <!-- Scale & cadence -->
-        <div class="section">
-          <div class="label">03 · Cadence</div>
-          <h2>How they ship.</h2>
-          <p class="lede">Weekly batches, mostly Mon/Tue. Short flights — 61–75% of new ads were off within a day in Jul–Sep. Testing volume: 10/month in May–Jun → 189–398/month from July.</p>
-          <div class="tbl">
-            <table>
-              <thead><tr><th>Country</th><th>Live ads · Oct 27</th></tr></thead>
-              <tbody>
-                <tr><td>United States</td><td class="num">~570</td></tr>
-                <tr><td>United Kingdom</td><td class="num">~150</td></tr>
-                <tr><td>Canada</td><td class="num">~150</td></tr>
-                <tr><td>Australia</td><td class="num">~140</td></tr>
-                <tr><td>Ireland</td><td class="num">~42</td></tr>
-                <tr><td>Germany</td><td class="num">~42</td></tr>
-                <tr><td>India</td><td class="num">0</td></tr>
-                <tr><td>All countries (dedup)</td><td class="num">~830</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Two machines -->
-        <div class="section">
-          <div class="label">04 · Two machines</div>
-          <h2>Clone winners in spring, test 400 concepts a month in autumn.</h2>
-          <p class="lede">
-            <strong>May–Jun</strong> — cloning: 10 new concepts/month while 600+ ads launched. Three ads, hundreds of times.<br>
-            <strong>Jul–Sep</strong> — testing: 189 → 398 new concepts/month, Sign Up CTA. September had <strong>1,644 launches</strong>.
-          </p>
-          <div class="tbl">
-            <table>
-              <thead><tr><th>Per month</th><th class="num">Mar</th><th class="num">Apr</th><th class="num">May</th><th class="num">Jun</th><th class="num">Jul</th><th class="num">Aug</th><th class="num">Sep</th><th class="num">Oct*</th></tr></thead>
-              <tbody>
-                <tr><td>Ads launched</td><td class="num">174</td><td class="num">158</td><td class="num">640</td><td class="num">606</td><td class="num">672</td><td class="num">849</td><td class="num">1,644</td><td class="num">821</td></tr>
-                <tr><td>New concepts tested</td><td class="num">43</td><td class="num">41</td><td class="num">10</td><td class="num">10</td><td class="num">189</td><td class="num">293</td><td class="num">398</td><td class="num">61</td></tr>
-                <tr><td>Alive after 7 days</td><td class="num">5%</td><td class="num">33%</td><td class="num">23%</td><td class="num">15%</td><td class="num">18%</td><td class="num">4%</td><td class="num">13%</td><td class="num">3%</td></tr>
-                <tr><td>Dead within 1 day</td><td class="num">39%</td><td class="num">29%</td><td class="num">45%</td><td class="num">74%</td><td class="num">61%</td><td class="num">75%</td><td class="num">63%</td><td class="num">54%</td></tr>
-                <tr><td>Video share</td><td class="num">42%</td><td class="num">52%</td><td class="num">51%</td><td class="num">43%</td><td class="num">39%</td><td class="num">52%</td><td class="num">56%</td><td class="num">61%</td></tr>
-                <tr><td>CTA = Sign Up</td><td class="num">0%</td><td class="num">0%</td><td class="num">0%</td><td class="num">0%</td><td class="num">18%</td><td class="num">79%</td><td class="num">89%</td><td class="num">88%</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="micro" style="text-align:left;margin-top:12px">* October through the 13th. Concept = ads sharing the same opening copy.</p>
-        </div>
-
-        <!-- Cloning winners -->
-        <div class="section">
-          <div class="label">05 · Cloning winners</div>
-          <h2>One demo, 1,119 copies.</h2>
-          <p class="lede">The same ad launched <strong>131 times</strong> in a single day. 102 copies on May 7, 51 on May 25, 47 on Jun 19. Then the clones burned out: alive-after-7-days fell 33% → 15% from April to June.</p>
-          <div class="tbl">
-            <table>
-              <thead><tr><th>Concept (first line)</th><th class="num">Mar</th><th class="num">Apr</th><th class="num">May</th><th class="num">Jun</th><th class="num">Jul</th><th class="num">Aug</th><th class="num">Sep–Oct</th><th class="num">Total</th></tr></thead>
-              <tbody>
-                <tr><td>"@Viktor, what's our revenue so far this week?"</td><td class="num">95</td><td class="num">36</td><td class="num">302</td><td class="num">444</td><td class="num">225</td><td class="num">6</td><td class="num">11</td><td class="num">1,119</td></tr>
-                <tr><td>"Tired of tab overload?" (media-buying LP)</td><td class="num">3</td><td class="num">36</td><td class="num">84</td><td class="num">23</td><td class="num">42</td><td class="num">0</td><td class="num">0</td><td class="num">188</td></tr>
-                <tr><td>"Pause any Meta ad sets with CPA over $40"</td><td class="num">8</td><td class="num">5</td><td class="num">55</td><td class="num">10</td><td class="num">22</td><td class="num">0</td><td class="num">0</td><td class="num">100</td></tr>
-                <tr><td>"You're the glue between 15 different tools"</td><td class="num">5</td><td class="num">2</td><td class="num">19</td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">33</td></tr>
-                <tr><td>"Your team doesn't need another dashboard"</td><td class="num">0</td><td class="num">8</td><td class="num">10</td><td class="num">5</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">25</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Testing at volume -->
-        <div class="section">
-          <div class="label">06 · Testing at volume</div>
-          <h2>Hit rate fell from 36% to 19% as volume doubled.</h2>
-          <p class="lede">
-            <strong>16 → 4</strong> concepts per month earning 20+ ads. July produced the autumn winners; September mostly produced noise.
-            <strong>1 in 4</strong> September concepts got exactly one ad and were never tried again — 107 ideas, each one launch.
-          </p>
-          <div class="tbl">
-            <table>
-              <thead><tr><th>Concept cohort</th><th class="num">Jul</th><th class="num">Aug</th><th class="num">Sep</th><th class="num">Oct*</th></tr></thead>
-              <tbody>
-                <tr><td>Concepts tested</td><td class="num">189</td><td class="num">293</td><td class="num">398</td><td class="num">61</td></tr>
-                <tr><td>One ad, never repeated</td><td class="num">29</td><td class="num">85</td><td class="num">107</td><td class="num">14</td></tr>
-                <tr><td>Scaled to 5+ ads</td><td class="num">69</td><td class="num">60</td><td class="num">76</td><td class="num">0</td></tr>
-                <tr><td>Scaled to 20+ ads</td><td class="num">16</td><td class="num">7</td><td class="num">4</td><td class="num">0</td></tr>
-                <tr><td>Hit rate (5+ ads)</td><td class="num">36%</td><td class="num">20%</td><td class="num">19%</td><td class="num">—</td></tr>
-                <tr><td>Still live Oct 13</td><td class="num">49</td><td class="num">62</td><td class="num">222</td><td class="num">58</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Hooks shift -->
-        <div class="section">
-          <div class="label">07 · Hook shift</div>
-          <h2>Curiosity fell from 72% to 8%. Social proof and "$100 free" took its place.</h2>
-          <div class="tbl">
-            <table>
-              <thead><tr><th>Hook</th><th class="num">May</th><th class="num">Jun</th><th class="num">Jul</th><th class="num">Aug</th><th class="num">Sep</th><th class="num">Oct</th></tr></thead>
-              <tbody>
-                <tr><td>Curiosity</td><td class="num">57%</td><td class="num">72%</td><td class="num">35%</td><td class="num">11%</td><td class="num">12%</td><td class="num">8%</td></tr>
-                <tr><td>Social proof</td><td class="num">5%</td><td class="num">2%</td><td class="num">14%</td><td class="num">40%</td><td class="num">37%</td><td class="num">31%</td></tr>
-                <tr><td>Free $100, no card</td><td class="num">0%</td><td class="num">1%</td><td class="num">6%</td><td class="num">3%</td><td class="num">23%</td><td class="num">34%</td></tr>
-                <tr><td>Simplicity / ease</td><td class="num">39%</td><td class="num">17%</td><td class="num">34%</td><td class="num">30%</td><td class="num">26%</td><td class="num">24%</td></tr>
-                <tr><td>Pain point</td><td class="num">24%</td><td class="num">9%</td><td class="num">22%</td><td class="num">26%</td><td class="num">21%</td><td class="num">15%</td></tr>
-                <tr><td>Transformation</td><td class="num">4%</td><td class="num">0%</td><td class="num">11%</td><td class="num">17%</td><td class="num">18%</td><td class="num">18%</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Angles -->
-        <div class="section">
-          <div class="label">08 · Messaging angles</div>
-          <h2>Eight angles. One formula.</h2>
-          <p class="lede">Quantified pain → "AI employee in Slack or Teams" → proof number (45k+ → 60k+ teams) → viktor.com.</p>
-          <div class="angles">
-            <div class="angle"><div class="a-name">Cross-tool demo · #1 concept</div><div class="a-q">"@Viktor, what's our revenue so far this week & how's our pipeline looking?" — 30 seconds. Zero tabs.</div><div class="a-s">1,119 launches, Mar – Aug. Product UI is the proof.</div></div>
-            <div class="angle"><div class="a-name">Media buyer · own LP</div><div class="a-q">"Pause any Meta ad sets with CPA over $40…" · "The media buyer that never logs off"</div><div class="a-s">288 launches in spring, back in Sep. viktor.com/media-lp.</div></div>
-            <div class="angle"><div class="a-name">Replace a hire</div><div class="a-q">"One founder gave the $90K ops role to Viktor" · "A $117K ops hire was the plan"</div><div class="a-s">Core angle Aug–Oct, relaunched monthly.</div></div>
-            <div class="angle"><div class="a-name">Builds software</div><div class="a-q">"The agency quoted fifteen grand for a client portal… Viktor built ours over the weekend."</div><div class="a-s">Scaling in Sep–Oct. Mirrored by Mitch Conquer: "$30,000 portal built in seven minutes."</div></div>
-            <div class="angle"><div class="a-name">Model routing</div><div class="a-q">"Picking a model shouldn't be a gamble" · "Even ChatGPT picks Viktor"</div><div class="a-s">Heavy in Sep–Oct. Removes the "which model?" friction.</div></div>
-            <div class="angle"><div class="a-name">UGC curiosity</div><div class="a-q">"I Stopped Using ChatGPT After This…" · "OpenClaw Is Cool… But Is It Safe?"</div><div class="a-s">72% of hooks in June → 8% by October.</div></div>
-            <div class="angle"><div class="a-name">Funding momentum</div><div class="a-q">"Viktor raised $75M because the work he returns is real."</div><div class="a-s">Updated with each raise ($75M → $87M).</div></div>
-            <div class="angle"><div class="a-name">Always-on / night shift</div><div class="a-q">"Logged off at 6. Woke up to 14 follow-ups already sent."</div><div class="a-s">Single-ad tests.</div></div>
-          </div>
-        </div>
-
-        <!-- Landing pages -->
-        <div class="section">
-          <div class="label">09 · Landing pages</div>
-          <h2>One homepage does the work.</h2>
-          <p class="lede">
-            Three persona LPs tested in Aug–Sep (agencies, legal, e-commerce) — all back to ≤2 ads by October.
-            Enterprise pages peaked at 65 launches in July, then faded. Everything funnels back to <strong>viktor.com</strong> + $100 in free credits, no card.
-          </p>
-          <div class="tbl">
-            <table>
-              <thead><tr><th>Destination</th><th class="num">May</th><th class="num">Jun</th><th class="num">Jul</th><th class="num">Aug</th><th class="num">Sep</th><th class="num">Oct</th></tr></thead>
-              <tbody>
-                <tr><td>viktor.com home</td><td class="num">96</td><td class="num">439</td><td class="num">500</td><td class="num">729</td><td class="num">1,281</td><td class="num">737</td></tr>
-                <tr><td>getviktor.com (legacy)</td><td class="num">540</td><td class="num">116</td><td class="num">104</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
-                <tr><td>/for/agencies</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">35</td><td class="num">70</td><td class="num">2</td></tr>
-                <tr><td>/for/legal · /for/ecommerce</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">45</td><td class="num">40</td><td class="num">0</td></tr>
-                <tr><td>/business · /enterprise · /contact-sales</td><td class="num">0</td><td class="num">47</td><td class="num">65</td><td class="num">17</td><td class="num">13</td><td class="num">5</td></tr>
-                <tr><td>viktor.com/r/… tracked</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">177</td><td class="num">40</td></tr>
-                <tr><td>ref.viktor.com (creators)</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">23</td><td class="num">63</td><td class="num">37</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Top ads -->
-        <div class="section">
-          <div class="label">10 · The ads that worked</div>
-          <h2>Scaled creatives, verbatim.</h2>
-          <div class="cards">
-            <article class="ad-card">
-              <div class="fmt">UGC Video · 0:39</div>
-              <div class="q">"@Viktor, what's our revenue so far this week &amp; how's our pipeline looking?" Stripe + HubSpot + Linear in one Slack message.</div>
-              <div class="meta">Jul 2 – Jul 15, 2026 · 4 versions · <a href="https://www.facebook.com/ads/library/?id=980310278399493" target="_blank" rel="noopener">Ad Library →</a></div>
-            </article>
-            <article class="ad-card">
-              <div class="fmt">Static</div>
-              <div class="q">"Your team doesn't need another dashboard. They need a coworker who already knows Stripe, Notion, HubSpot, Linear…" Card: "1 Slack message. Viktor builds the tool."</div>
-              <div class="meta">May 7 – Jul 15, 2026 · 9 versions · <a href="https://www.facebook.com/ads/library/?id=1487339129552066" target="_blank" rel="noopener">Ad Library →</a></div>
-            </article>
-            <article class="ad-card">
-              <div class="fmt">UGC Video · 0:26</div>
-              <div class="q">"@Viktor, pause any Meta ad sets with CPA over $40 and shift that budget to the top performers."</div>
-              <div class="meta">Jun 1 – Jul 3, 2026 · 6 versions · <a href="https://www.facebook.com/ads/library/?id=4456749137923159" target="_blank" rel="noopener">Ad Library →</a></div>
-            </article>
-            <article class="ad-card">
-              <div class="fmt">Video · 0:30</div>
-              <div class="q">"Viktor basically runs like a media buyer that never logs off. Pacing checks, performance summaries, client reporting."</div>
-              <div class="meta">Sep 29, 2026 – live · 8 versions · <a href="https://www.facebook.com/ads/library/?id=1593325579196080" target="_blank" rel="noopener">Ad Library →</a></div>
-            </article>
-            <article class="ad-card">
-              <div class="fmt">Static · Replace a hire</div>
-              <div class="q">"One founder gave the $90K ops role to Viktor. The work is done daily in Slack, and the budget stayed."</div>
-              <div class="meta">Aug 18 – Sep 2, 2026 · 17 versions · <a href="https://www.facebook.com/ads/library/?id=27875953088762789" target="_blank" rel="noopener">Ad Library →</a></div>
-            </article>
-            <article class="ad-card">
-              <div class="fmt">Skit Video · 0:44</div>
-              <div class="q">"The agency quoted fifteen grand for a client portal and a login screen. Viktor built ours over the weekend."</div>
-              <div class="meta">Sep 30 – Oct 14, 2026 · 13 versions · <a href="https://www.facebook.com/ads/library/?id=2052935128725876" target="_blank" rel="noopener">Ad Library →</a></div>
-            </article>
-          </div>
-        </div>
-
-        <!-- Formats & loop -->
-        <div class="section">
-          <div class="label">11 · System</div>
-          <h2>Formats &amp; testing loop.</h2>
-          <div class="kpi" style="grid-template-columns:repeat(2,minmax(0,1fr))">
-            <div class="card">
-              <div class="k">Formats</div>
-              <div class="d" style="margin-top:14px;max-width:100%">
-                ~50/50 video vs static. Template barely changes: native Slack exchange, short benefit line, "VIKTOR.COM" card.
-                Brand videos 0:08–0:55, hook-first. Creator videos 0:19–3:00, median 1:20.
-                Product-as-creative: user @mentions Viktor, Viktor replies with numbers, a PDF or a link.
-              </div>
-            </div>
-            <div class="card">
-              <div class="k">Testing loop</div>
-              <div class="d" style="margin-top:14px;max-width:100%">
-                ~90 new concepts a week at September peak; 1 in 4 got a single ad.
-                Winners relaunched month after month: 103 concepts ran in 3+ months.
-                Most new ads off within a day (61–75% in Jul–Sep).
-                Advantage+ placements, no placement-specific creative.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Creators -->
-        <div class="section">
-          <div class="label">12 · Creator & affiliate layer</div>
-          <h2>A second paid channel sitting on top.</h2>
-          <p class="lede">~60 creator / partner / affiliate cards running alongside the main machine. Reseller pitch: <strong>"Viktor pays partners 20% of usage"</strong>. Mina Elias reports $38k in 30 days.</p>
-          <div class="tbl">
-            <table>
-              <thead><tr><th>Advertiser</th><th>Type</th><th>What they run</th></tr></thead>
-              <tbody>
-                <tr><td>Mina Elias (Trivium)</td><td>Partnership + own</td><td>~20 cards. Founder testimonial, then reseller pitch. → ref.viktor.com/mina</td></tr>
-                <tr><td>Mitch Conquer</td><td>Partnership</td><td>Case studies: "$19k payroll saved", "$30k portal in 7 minutes" (1:03–1:13)</td></tr>
-                <tr><td>Ali Abdaal</td><td>Partnership</td><td>"Comment VIKTOR for $100 worth of free work" + 1-week diary (1:19–1:34), Aug 18 – Sep 18</td></tr>
-                <tr><td>Beca_Tries, Lead Gen Man</td><td>Partnership</td><td>Operator UGC: "I let an AI employee handle a report that cost my team 4 hours/week"</td></tr>
-                <tr><td>Fryd Wiatrowski (CEO)</td><td>Founder page</td><td>"We raised $75M with one goal: an AI employee for every company" (updated to $87M)</td></tr>
-                <tr><td>Agency Mavericks</td><td>Affiliate</td><td>"$100K+ in 30 days setting up AI employees", comment-to-get-guide</td></tr>
-                <tr><td>Brice Gump, Narrative Ops</td><td>Affiliate</td><td>Comment-bait, Spanish "$100 gratis", "Free to start, no card needed"</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- CTA -->
-        <div class="cta-block">
-          <h3>Want this done for <em style="font-style:italic">your</em> market?</h3>
-          <p>
-            We take competitor machines apart like this, then build yours: creative testing loops,
-            paid acquisition, funnels. Paid ads experts from YC managing $20M+ in marketing spend.
-          </p>
-          <div class="cta">
-            <a class="btn" style="width:auto" href="mailto:hello@humans2.ai?subject=Growth%20call%20with%20humans2&body=I%20just%20read%20the%20Viktor.com%20teardown.%20Here's%20what%20we're%20working%20on%3A">
-              Book a discovery call
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12 12 4M6 4h6v6"/></svg>
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-  </main>
-
+        <button class="btn" type="submit" id="submitBtn">
+          Unlock the teardown
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12 12 4M6 4h6v6"/></svg>
+        </button>
+        <p class="micro">No spam. One email, one teardown. Unsubscribe anytime.</p>
+        <div class="status" id="status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
   <footer>
     <div>© 2026 Humans² · Human taste. Machine speed.</div>
     <div><a href="mailto:hello@humans2.ai">hello@humans2.ai</a></div>
   </footer>
-</div>
+</section>
+
+<!-- ================= TEARDOWN (deck) ================= -->
+<section class="teardown" id="teardown" aria-hidden="true">
+
+  <!-- COVER -->
+  <div class="deck">
+    <article class="page">
+      <div class="cover">
+        <div class="cover-inner">
+          <div class="cover-head">
+            <span>Competitor Teardown · by Humans²</span>
+            <span>Oct 2026</span>
+          </div>
+          <div class="cover-body">
+            <div class="cover-title">Viktor.com</div>
+            <div class="cover-sub">Paid acquisition teardown<br><span class="mute">Creatives, angles, funnel.</span></div>
+          </div>
+          <div class="cover-foot">
+            <span>Prepared by Humans² · Human × AI growth agency</span>
+            <span>01</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 03. Scale -->
+    <article class="page">
+      <div class="pg-head"><span>Viktor.com · Paid acquisition teardown</span><span>Meta Ad Library · Oct 2026</span></div>
+      <h2 class="h-lg" style="margin-top:28px">A high-volume Meta machine</h2>
+      <div class="kpi-grid">
+        <div class="kpi-cell"><div class="k">Ads all-time</div><div class="n">~2,000</div><div class="d">Official page in Meta Ad Library (ID 973849642483367)</div></div>
+        <div class="kpi-cell"><div class="k">Live on Oct 27</div><div class="n">~830</div><div class="d">Two-thirds serve in the US</div></div>
+        <div class="kpi-cell"><div class="k">Launches of the #1 concept</div><div class="n">1,119</div><div class="d">The "what's our revenue" Slack demo, Mar – Aug. Up to 131 in a single day</div></div>
+        <div class="kpi-cell"><div class="k">Video share</div><div class="n">~50%</div><div class="d">39–61% by month. The rest are statics and 4–5 card carousels</div></div>
+        <div class="kpi-cell"><div class="k">New concepts in September</div><div class="n">398</div><div class="d">Up from 10 a month in May – Jun</div></div>
+        <div class="kpi-cell"><div class="k">Free credits, no card</div><div class="n">$100</div><div class="d">Offer stated in the ad. Team plan $100/mo</div></div>
+      </div>
+      <div class="pg-foot"><span></span><span class="pn">03</span></div>
+    </article>
+
+    <!-- 04. TL;DR -->
+    <article class="page">
+      <div class="pg-head"><span>Viktor.com · Paid acquisition teardown</span><span>Meta Ad Library · Oct 2026</span></div>
+      <h2 class="h-lg" style="margin-top:28px">TL;DR</h2>
+      <div class="tldr">
+        <div class="row"><div class="n">01</div><div class="t"><strong>Volume over precision.</strong> ~2,000 ads all-time, ~830 live on Oct 27, up to 398 new concepts tested a month.</div></div>
+        <div class="row"><div class="n">02</div><div class="t"><strong>US-first.</strong> Oct 27: US ~570 live ads, UK ~150, CA ~150, AU ~140, IE/DE ~42, India 0.</div></div>
+        <div class="row"><div class="n">03</div><div class="t"><strong>Broad audiences, the creative does the segmenting.</strong> EU sample ad: 25–65+, all genders, 142,628 reached in 12 days.</div></div>
+        <div class="row"><div class="n">04</div><div class="t"><strong>One winning concept, scaled hard.</strong> The revenue + pipeline Slack demo: 1,119 launches, up to 131 in one day.</div></div>
+        <div class="row"><div class="n">05</div><div class="t"><strong>Two machines.</strong> Spring: clone three winners. From July: test 189–398 new concepts a month, Sign Up CTA.</div></div>
+        <div class="row"><div class="n">06</div><div class="t"><strong>Priced against a salary, not software:</strong> "$90K ops role", "$117K ops hire", "$15k agency quote".</div></div>
+        <div class="row"><div class="n">07</div><div class="t"><strong>Creators and affiliates are a second paid channel:</strong> Ali Abdaal, Mina Elias, Mitch Conquer, plus ref.viktor.com.</div></div>
+        <div class="row"><div class="n">08</div><div class="t"><strong>Low-friction offer:</strong> homepage → $100 in free credits, no card.</div></div>
+      </div>
+      <div class="pg-foot"><span></span><span class="pn">04</span></div>
+    </article>
+
+    <!-- 05. Scale & cadence -->
+    <article class="page">
+      <div class="pg-head"><span>Viktor.com · Paid acquisition teardown</span><span>Meta Ad Library · Oct 2026</span></div>
+      <h2 class="h-lg" style="margin-top:28px">Scale &amp; cadence</h2>
+      <div class="two-col">
+        <div class="col">
+          <span class="cap">Active ads by market · Oct 27</span>
+          <table class="ltable">
+            <tr><td>United States</td><td class="num">~570</td></tr>
+            <tr><td>United Kingdom</td><td class="num">~150</td></tr>
+            <tr><td>Canada</td><td class="num">~150</td></tr>
+            <tr><td>Australia</td><td class="num">~140</td></tr>
+            <tr><td>Ireland</td><td class="num">~42</td></tr>
+            <tr><td>Germany</td><td class="num">~42</td></tr>
+            <tr><td>India</td><td class="num">0</td></tr>
+            <tr class="total"><td>All countries</td><td class="num">~830</td></tr>
+          </table>
+          <div class="foot-note">One ad can serve in several countries, so markets add up to more than the total.</div>
+        </div>
+        <div class="col">
+          <span class="cap">How they ship</span>
+          <div class="stacks">
+            <div class="s"><strong>Weekly batches, mostly Mon/Tue</strong><span>Aug 18, 24, 31 · Sep 7, 15, 22, 29 · Oct 6, 12–13, 19–20</span></div>
+            <div class="s"><strong>Short flights</strong><span>In Jul – Sep 61–75% of new ads were off within a day</span></div>
+            <div class="s"><strong>Wide testing</strong><span>189 → 398 new concepts a month since July, vs 10 a month in May – Jun</span></div>
+            <div class="s"><strong>Ads far outrun organic</strong><span>FB page ~3.8K followers, IG @meet.viktor ~20.3K</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="pg-foot"><span></span><span class="pn">05</span></div>
+    </article>
+
+    <!-- 06. Two machines -->
+    <article class="page">
+      <div class="pg-head"><span>Viktor.com · Paid acquisition teardown</span><span>Ad Archive Export · Oct 13, 2026</span></div>
+      <h2 class="h-lg" style="margin-top:28px">Two machines <span class="mute">· every launch, Mar – Oct</span></h2>
+      <p class="lede">Clone three winners in spring, test 400 concepts a month in autumn.</p>
+      <div class="matrix-wrap">
+        <table class="matrix">
+          <thead><tr><th>Per month</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th><th>Jul</th><th>Aug</th><th>Sep</th><th>Oct*</th></tr></thead>
+          <tbody>
+            <tr><td>Ads launched</td><td>174</td><td>158</td><td class="hi-w">640</td><td class="hi-w">606</td><td class="hi-g">672</td><td class="hi-g">849</td><td class="hi-g hi-i">1,644</td><td class="dim">821</td></tr>
+            <tr><td>New concepts tested</td><td>43</td><td>41</td><td class="hi-w">10</td><td class="hi-w">10</td><td class="hi-g">189</td><td class="hi-g">293</td><td class="hi-g hi-i">398</td><td class="dim">61</td></tr>
+            <tr><td>Ads alive after 7 days</td><td>5%</td><td>33%</td><td>23%</td><td>15%</td><td>18%</td><td class="hi-r">4%</td><td>13%</td><td class="dim hi-r">3%</td></tr>
+            <tr><td>Dead within 1 day</td><td>39%</td><td>29%</td><td>45%</td><td class="hi-r">74%</td><td class="hi-r">61%</td><td class="hi-r">75%</td><td class="hi-r">63%</td><td class="dim">54%</td></tr>
+            <tr><td>Video share</td><td>42%</td><td>52%</td><td>51%</td><td>43%</td><td>39%</td><td>52%</td><td>56%</td><td class="dim">61%</td></tr>
+            <tr><td>CTA = Sign Up</td><td>0%</td><td>0%</td><td>0%</td><td>0%</td><td>18%</td><td class="hi-g">79%</td><td class="hi-g">89%</td><td class="dim hi-g">88%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="three-stats">
+        <div class="s"><span class="cap wr">May–Jun</span><div class="n">Cloning</div><div class="d">10 new concepts a month while 600+ ads launched. The same three ads, hundreds of times.</div></div>
+        <div class="s"><span class="cap gr">Jul–Sep</span><div class="n">Testing</div><div class="d">189 → 398 new concepts a month, Sign Up CTA. This is where 1,644 launches in September come from.</div></div>
+        <div class="s"><span class="cap rd">The cost</span><div class="n">75% dead/day</div><div class="d">In June and August three quarters of new ads were off within a day; only 4–15% lasted a week.</div></div>
+      </div>
+      <div class="foot-note">Concept = ads sharing the same opening copy. Lifespan = first to last active day, not a performance metric. * October through the 13th.</div>
+      <div class="pg-foot"><span></span><span class="pn">06</span></div>
+    </article>
+
+    <!-- 07. Cloning winners -->
+    <article class="page">
+      <div class="pg-head"><span>Viktor.com · Paid acquisition teardown</span><span>Ad Archive Export · Oct 13, 2026</span></div>
+      <h2 class="h-lg" style="margin-top:28px">Cloning winners <span class="mute">· Mar – Jul</span></h2>
+      <p class="lede">One demo, 1,119 copies: the same ad launched 131 times in a single day.</p>
+      <div class="matrix-wrap">
+        <table class="matrix">
+          <thead><tr><th>Concept (first line)</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th><th>Jul</th><th>Aug</th><th>Sep–Oct</th><th>Total</th></tr></thead>
+          <tbody>
+            <tr><td>"@Viktor, what's our revenue so far this week?" ↗</td><td>95</td><td>36</td><td>302</td><td class="hi-w hi-i">444</td><td>225</td><td class="hi-r">6</td><td class="hi-r">11</td><td class="hi-i">1,119</td></tr>
+            <tr><td>"Tired of tab overload?" (media-buying LP)</td><td>3</td><td>36</td><td>84</td><td>23</td><td>42</td><td>0</td><td>0</td><td>188</td></tr>
+            <tr><td>"Pause any Meta ad sets with CPA over $40" ↗</td><td>8</td><td>5</td><td>55</td><td>10</td><td>22</td><td>0</td><td>0</td><td>100</td></tr>
+            <tr><td>"You're the glue between 15 different tools"</td><td>5</td><td>2</td><td>19</td><td>5</td><td>0</td><td>0</td><td>2</td><td>33</td></tr>
+            <tr><td>"Your team doesn't need another dashboard" ↗</td><td>0</td><td>8</td><td>10</td><td>5</td><td>2</td><td>0</td><td>0</td><td>25</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="three-stats">
+        <div class="s"><span class="cap">Peak</span><div class="n">131 / day</div><div class="d">copies of the revenue demo launched on Jul 2. 102 on May 7, 51 on May 25, 47 on Jun 19.</div></div>
+        <div class="s"><span class="cap wr">Burnout</span><div class="n">33% → 15%</div><div class="d">ads alive after 7 days, April to June. The clones burned out faster each month.</div></div>
+        <div class="s"><span class="cap rd">Switch-off</span><div class="n">444 → 6</div><div class="d">revenue-demo launches, June to August. Scaling stopped; only a few copies stayed live.</div></div>
+      </div>
+      <div class="foot-note">Same-day copies = ads with identical opening copy created on the same date. Top-5 concepts by all-time ad count among those launched before July.</div>
+      <div class="pg-foot"><span></span><span class="pn">07</span></div>
+    </article>
+
+    <!-- 08. Testing at volume -->
+    <article class="page">
+      <div class="pg-head"><span>Viktor.com · Paid acquisition teardown</span><span>Ad Archive Export · Oct 13, 2026</span></div>
+      <h2 class="h-lg" style="margin-top:28px">Testing at volume <span class="mute">· Jul – Oct</span></h2>
+      <p class="lede">Hit rate fell from 36% to 19% as testing volume doubled.</p>
+      <div class="two-col" style="grid-template-columns:1.6fr 1fr;gap:36px">
+        <div class="col">
+          <div class="matrix-wrap">
+            <table class="matrix">
+              <thead><tr><th>Concept cohort</th><th>Jul</th><th>Aug</th><th>Sep</th><th>Oct*</th></tr></thead>
+              <tbody>
+                <tr><td>Concepts tested</td><td class="hi-g">189</td><td class="hi-g">293</td><td class="hi-g hi-i">398</td><td class="dim">61</td></tr>
+                <tr><td>One ad, never repeated</td><td>29</td><td>85</td><td class="hi-r hi-i">107</td><td class="dim">14</td></tr>
+                <tr><td>Scaled to 5+ ads</td><td class="hi-g">69</td><td>60</td><td>76</td><td class="dim">0</td></tr>
+                <tr><td>Scaled to 20+ ads</td><td class="hi-g hi-i">16</td><td>7</td><td class="hi-r">4</td><td class="dim">0</td></tr>
+                <tr><td>Hit rate (5+ ads)</td><td class="hi-g">36%</td><td>20%</td><td class="hi-r">19%</td><td class="dim">—</td></tr>
+                <tr><td>Concepts still live Oct 13</td><td>49</td><td>62</td><td class="hi-i">222</td><td>58</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col">
+          <div class="three-stats" style="grid-template-columns:1fr;border-top:1px solid var(--gray-300)">
+            <div class="s" style="border-right:0;border-bottom:1px solid var(--gray-100);padding:24px 0 20px"><span class="cap">Decline</span><div class="n">16 → 4</div><div class="d">concepts a month that earned 20+ ads. July produced the autumn winners; September mostly produced noise.</div></div>
+            <div class="s" style="border-right:0;border-bottom:1px solid var(--gray-100);padding:24px 0 20px"><span class="cap wr">Waste</span><div class="n">1 in 4</div><div class="d">September concepts got exactly one ad and were never tried again. 107 ideas spent on a single launch.</div></div>
+            <div class="s" style="border-right:0;padding:24px 0 0"><span class="cap gr">Alive</span><div class="n">222</div><div class="d">September concepts still live on Oct 13, more than any other month.</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="foot-note">Cohort = month of a concept's first ad; counts include all later ads of that concept. * October through the 13th.</div>
+      <div class="pg-foot"><span></span><span class="pn">08</span></div>
+    </article>
+
+    <!-- 09. Relaunched vs switched off -->
+    <article class="page">
+      <div class="pg-head"><span>Viktor.com · Paid acquisition teardown</span><span>Ad Archive Export · Oct 13, 2026</span></div>
+      <h2 class="h-lg" style="margin-top:28px">Relaunched vs switched off</h2>
+      <p class="lede">103 concepts keep getting relaunched; 7 got 13–100 copies and were never seen again.</p>
+      <div class="two-col">
+        <div class="col">
+          <span class="cap gr">Relaunched · ads in 3+ months, live Oct 13 · top 6 of 103</span>
+          <div class="matrix-wrap" style="margin-top:16px">
+            <table class="matrix">
+              <thead><tr><th>Concept</th><th>Jul</th><th>Aug</th><th>Sep</th><th>Oct</th><th>Live</th></tr></thead>
+              <tbody>
+                <tr><td>"Viktor checks every dashboard daily"</td><td>6</td><td>9</td><td>14</td><td>10</td><td class="hi-g">10</td></tr>
+                <tr><td>"The AI employee that lives in Slack and Teams"</td><td>7</td><td>15</td><td>11</td><td>2</td><td class="hi-g">5</td></tr>
+                <tr><td>"Reads every client account daily"</td><td>4</td><td>8</td><td>14</td><td>6</td><td class="hi-g">8</td></tr>
+                <tr><td>Mina Elias: "executing on AI or pretending"</td><td>0</td><td>1</td><td>18</td><td>11</td><td class="hi-g">11</td></tr>
+                <tr><td>"He builds software too"</td><td>1</td><td>4</td><td>18</td><td>6</td><td class="hi-g">7</td></tr>
+                <tr><td>"One founder gave the $90K ops role"</td><td>3</td><td>9</td><td>9</td><td>8</td><td class="hi-g">6</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="foot-note">The revenue demo (1,119 ads, 3 live) also qualifies. Pattern: a few ads in July, more in August, most in September.</div>
+        </div>
+        <div class="col">
+          <span class="cap rd">Switched off · 12+ ads, none live, median ≤ 1 day · all 7</span>
+          <div class="matrix-wrap" style="margin-top:16px">
+            <table class="matrix">
+              <thead><tr><th>Concept</th><th>Ads</th><th>Launched · last seen</th></tr></thead>
+              <tbody>
+                <tr><td>"Pause any Meta ad sets with CPA over $40" → media-buying LP</td><td class="hi-r">100</td><td class="dim">Mar 31 – Jul 13 · Jul 31</td></tr>
+                <tr><td>"Founders who seem to do it all…" → /contact-sales</td><td>37</td><td class="dim">Jun 30 – Jul 13</td></tr>
+                <tr><td>"Your team doesn't need another dashboard"</td><td>25</td><td class="dim">Apr 1 – Jul 2 · Jul 13</td></tr>
+                <tr><td>"Nightly workload of several analysts" → /enterprise</td><td>18</td><td class="dim">Jun 26 – Jul 2 · Jul 7</td></tr>
+                <tr><td>"First AI employee inside Microsoft Teams" → /business</td><td>16</td><td class="dim">Jul 14 – Sep 26 · Sep 27</td></tr>
+                <tr><td>"Our team had a role nobody could fill"</td><td>15</td><td class="dim">Aug 1 – 31 · Sep 2</td></tr>
+                <tr><td>"Month-end used to take a week" → /enterprise</td><td>13</td><td class="dim">Jun 26 – Jul 2 · Jul 7</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="foot-note">Four of seven carried enterprise copy and pointed at /business, /enterprise or /contact-sales. The spring media-buyer concept is here too: 100 ads, gone after July.</div>
+        </div>
+      </div>
+      <div class="foot-note">The archive has no spend, CTR or CPA. "Live" and "last seen" are scraper sightings as of Oct 13; a one-day ad can be a version rotation, not a verdict.</div>
+      <div class="pg-foot"><span></span><span class="pn">09</span></div>
+    </article>
+
+    <!-- 10. Hooks & LPs -->
+    <article class="page">
+      <div class="pg-head"><span>Viktor.com · Paid acquisition teardown</span><span>Ad Archive Export · Oct 13, 2026</span></div>
+      <h2 class="h-lg" style="margin-top:28px">Hooks &amp; landing pages <span class="mute">· by month</span></h2>
+      <p class="lede">Curiosity fell from 72% of hooks to 8%; social proof and "$100 free" took its place.</p>
+      <div class="two-col">
+        <div class="col">
+          <span class="cap">Hook tags · % of tagged ads</span>
+          <div class="matrix-wrap" style="margin-top:16px">
+            <table class="matrix">
+              <thead><tr><th>Hook</th><th>May</th><th>Jun</th><th>Jul</th><th>Aug</th><th>Sep</th><th>Oct</th></tr></thead>
+              <tbody>
+                <tr><td>Curiosity</td><td>57%</td><td class="hi-r hi-i">72%</td><td>35%</td><td>11%</td><td>12%</td><td class="hi-r">8%</td></tr>
+                <tr><td>Social proof</td><td>5%</td><td>2%</td><td>14%</td><td class="hi-g hi-i">40%</td><td class="hi-g">37%</td><td class="hi-g">31%</td></tr>
+                <tr><td>Free $100, no card</td><td>0%</td><td>1%</td><td>6%</td><td>3%</td><td class="hi-g">23%</td><td class="hi-g hi-i">34%</td></tr>
+                <tr><td>Simplicity / ease</td><td>39%</td><td>17%</td><td>34%</td><td>30%</td><td>26%</td><td>24%</td></tr>
+                <tr><td>Pain point</td><td>24%</td><td>9%</td><td>22%</td><td>26%</td><td>21%</td><td>15%</td></tr>
+                <tr><td>Transformation</td><td>4%</td><td>0%</td><td>11%</td><td>17%</td><td>18%</td><td>18%</td></tr>
+                <tr><td class="dim">Ads with any tag</td><td class="dim">13%</td><td class="dim">56%</td><td class="dim">53%</td><td class="dim">55%</td><td class="dim">62%</td><td class="dim">69%</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col">
+          <span class="cap">Landing pages · ads launched</span>
+          <div class="matrix-wrap" style="margin-top:16px">
+            <table class="matrix">
+              <thead><tr><th>Destination</th><th>May</th><th>Jun</th><th>Jul</th><th>Aug</th><th>Sep</th><th>Oct</th></tr></thead>
+              <tbody>
+                <tr><td>viktor.com home</td><td>96</td><td>439</td><td>500</td><td>729</td><td class="hi-g hi-i">1,281</td><td>737</td></tr>
+                <tr><td>getviktor.com (all)</td><td class="hi-w">540</td><td>116</td><td>104</td><td>0</td><td>0</td><td>0</td></tr>
+                <tr><td>/for/agencies</td><td>0</td><td>0</td><td>2</td><td>35</td><td>70</td><td>2</td></tr>
+                <tr><td>/for/legal · /for/ecommerce</td><td>0</td><td>0</td><td>0</td><td>45</td><td>40</td><td>0</td></tr>
+                <tr><td>/business · /enterprise</td><td>0</td><td>47</td><td>65</td><td>17</td><td>13</td><td>5</td></tr>
+                <tr><td>viktor.com/r/… tracked</td><td>0</td><td>0</td><td>0</td><td>0</td><td>177</td><td>40</td></tr>
+                <tr><td>ref.viktor.com (creators)</td><td>0</td><td>0</td><td>0</td><td>23</td><td>63</td><td>37</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="three-stats">
+        <div class="s"><span class="cap">Social proof surge</span><div class="n">5% → 40%</div><div class="d">social proof among tagged ads after mid-July; "$100 free" reached 23–34% in Sep–Oct, a month after Sign Up became the default CTA.</div></div>
+        <div class="s"><span class="cap">Persona LPs</span><div class="n">3 LPs</div><div class="d">agencies, legal, e-commerce tested in Aug–Sep; all fell to 2 or fewer ads in October. Enterprise pages peaked in July at 65 and faded.</div></div>
+        <div class="s"><span class="cap">Tracked links</span><div class="n">217 ads on /r/</div><div class="d">four tracked links appeared in September — most likely partner or campaign tracking. Creator videos run 19 s to 3 min, median 1:20.</div></div>
+      </div>
+      <div class="pg-foot"><span></span><span class="pn">10</span></div>
+    </article>
+
+    <!-- 11. Messaging angles -->
+    <article class="page">
+      <div class="pg-head"><span>Viktor.com · Paid acquisition teardown</span><span>Meta Ad Library · Oct 2026</span></div>
+      <h2 class="h-lg" style="margin-top:28px">Messaging angles</h2>
+      <table class="angles-tbl">
+        <thead><tr><th>Angle</th><th>Verbatim hook</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Cross-tool "one Slack message" demo</td><td class="q">"@Viktor, what's our revenue so far this week &amp; how's our pipeline looking?" … "30 seconds. Zero tabs."</td><td>#1 concept · 1,119 launches, Mar – Aug</td></tr>
+          <tr><td>Performance marketer / media buyer</td><td class="q">"pause any Meta ad sets with CPA over $40…" · "The media buyer that never logs off"</td><td>288 launches in spring, back in Sep · own LP</td></tr>
+          <tr><td>UGC curiosity hooks</td><td class="q">"I Couldn't Afford To Hire a Team.." · "OpenClaw Is Cool… But Is It Safe?"</td><td>72% of hooks in Jun → 8% in Oct</td></tr>
+          <tr><td>Every top model / routing</td><td class="q">"Picking a model shouldn't be a gamble" · "Even ChatGPT picks Viktor"</td><td>Heavy in Sep – Oct</td></tr>
+          <tr><td>Replace a hire / salary math</td><td class="q">"One founder gave the $90K ops role to Viktor" · "A $117K ops hire was the plan"</td><td>Core of Aug – Oct, relaunched monthly</td></tr>
+          <tr><td>Builds software</td><td class="q">"The agency quoted fifteen grand for a client portal… Viktor built ours over the weekend"</td><td>Scaling in Sep – Oct</td></tr>
+          <tr><td>Always-on / night shift</td><td class="q">"Logged off at 6. Woke up to 14 follow-ups already sent"</td><td>Single-ad tests</td></tr>
+          <tr><td>Funding / momentum</td><td class="q">"Viktor raised $75M because the work he returns is real"</td><td>Updated with each raise</td></tr>
+        </tbody>
+      </table>
+      <div class="pg-foot"><span></span><span class="pn">11</span></div>
+    </article>
+
+    <!-- 12. #1 concept -->
+    <article class="page">
+      <div class="pg-head"><span>Viktor.com · Paid acquisition teardown</span><span>Meta Ad Library · Oct 2026</span></div>
+      <h2 class="h-lg" style="margin-top:28px">#1 concept: the cross-tool demo</h2>
+      <p class="lede">1,119 launches, Mar – Aug, up to 131 a day. One concrete question, one concrete answer. The product UI is the proof.</p>
+      <div class="ad-grid-2">
+        <article class="ad-card">
+          <div class="ad-thumb vd">UGC thumbnail<div class="ad-badge">Video · 0:39</div></div>
+          <span class="label">Cross-tool demo · UGC video</span>
+          <div class="q">"@Viktor, what's our revenue so far this week &amp; how's our pipeline looking?" Stripe + HubSpot + Linear in one Slack message.</div>
+          <div class="meta">Viktor · Jul 2 – Jul 15, 2026 · 4 versions · ID 980310278399493</div>
+          <a class="link" href="https://www.facebook.com/ads/library/?id=980310278399493" target="_blank" rel="noopener">▶ watch video in Ad Library →</a>
+        </article>
+        <article class="ad-card">
+          <div class="ad-thumb pr">Product screenshot</div>
+          <span class="label">Cross-tool demo · Static</span>
+          <div class="q">"Your team doesn't need another dashboard. They need a coworker who already knows Stripe, Notion, HubSpot, Linear…" Card: "1 Slack message. Viktor builds the tool."</div>
+          <div class="meta">Viktor · May 7 – Jul 15, 2026 · 9 versions · ID 1487339129552066</div>
+          <a class="link" href="https://www.facebook.com/ads/library/?id=1487339129552066" target="_blank" rel="noopener">open in Ad Library →</a>
+        </article>
+      </div>
+      <div class="pg-foot"><span></span><span class="pn">12</span></div>
+    </article>
+
+    <!-- 13. Media buyer -->
+    <article class="page">
+      <div class="pg-head"><span>Viktor.com · Paid acquisition teardown</span><span>Meta Ad Library · Oct 2026</span></div>
+      <h2 class="h-lg" style="margin-top:28px">Media buyer angle</h2>
+      <p class="lede">288 launches in spring, back as video in late September. Dedicated landing page (viktor.com/media-lp). The persona is named in the first line, not in targeting.</p>
+      <div class="ad-grid-2">
+        <article class="ad-card">
+          <div class="ad-thumb vd">UGC thumbnail<div class="ad-badge">Video · 0:26</div></div>
+          <span class="label">Media buyer · UGC video</span>
+          <div class="q">"@Viktor, pause any Meta ad sets with CPA over $40 and shift that budget to the top performers."</div>
+          <div class="meta">Viktor · Jun 1 – Jul 3, 2026 · 6 versions · ID 4456749137923159</div>
+          <a class="link" href="https://www.facebook.com/ads/library/?id=4456749137923159" target="_blank" rel="noopener">▶ watch video in Ad Library →</a>
+        </article>
+        <article class="ad-card">
+          <div class="ad-thumb vd">Brand video<div class="ad-badge">Video · 0:30</div></div>
+          <span class="label">Media buyer · Video</span>
+          <div class="q">"Viktor basically runs like a media buyer that never logs off. Pacing checks, performance summaries, client reporting."</div>
+          <div class="meta">Viktor · Sep 29, 2026 – live · 8 versions · ID 1593325579196080</div>
+          <a class="link" href="https://www.facebook.com/ads/library/?id=1593325579196080" target="_blank" rel="noopener">▶ watch video in Ad Library →</a>
+        </article>
+      </div>
+      <div class="pg-foot"><span></span><span class="pn">13</span></div>
+    </article>
+
+    <!-- 14. Salary math / builds software -->
+    <article class="page">
+      <div class="pg-head"><span>Viktor.com · Paid acquisition teardown</span><span>Meta Ad Library · Oct 2026</span></div>
+      <h2 class="h-lg" style="margin-top:28px">Salary math &amp; "builds software"</h2>
+      <div class="ad-grid-3">
+        <article class="ad-card">
+          <div class="ad-thumb pr" style="background:linear-gradient(135deg,#efeaff,#c7bdfd)">Static ad</div>
+          <span class="label">Replace a hire · Static</span>
+          <div class="q">"One founder gave the $90K ops role to Viktor. The work is done daily in Slack, and the budget stayed."</div>
+          <div class="meta">Viktor · Aug 18 – Sep 2 · 17 versions · ID 27875953088762789</div>
+          <a class="link" href="https://www.facebook.com/ads/library/?id=27875953088762789" target="_blank" rel="noopener">open in Ad Library →</a>
+        </article>
+        <article class="ad-card">
+          <div class="ad-thumb vd">Skit video<div class="ad-badge">Video · 0:44</div></div>
+          <span class="label">Builds software · Skit video</span>
+          <div class="q">"The agency quoted fifteen grand for a client portal and a login screen. Viktor built ours over the weekend."</div>
+          <div class="meta">Viktor · Sep 30 – Oct 14 · 13 versions · ID 2052935128725876</div>
+          <a class="link" href="https://www.facebook.com/ads/library/?id=2052935128725876" target="_blank" rel="noopener">▶ watch video in Ad Library →</a>
+        </article>
+        <article class="ad-card">
+          <div class="ad-thumb vd">Creator video<div class="ad-badge">Video · 1:13</div></div>
+          <span class="label">Builds software · Creator</span>
+          <div class="q">"An agency was quoted $30,000 and four months for an AI client portal. Viktor built it in seven minutes."</div>
+          <div class="meta">Mitch Conquer with Viktor · Oct 7 – live · 6 versions · ID 1805741600437562</div>
+          <a class="link" href="https://www.facebook.com/ads/library/?id=1805741600437562" target="_blank" rel="noopener">▶ watch video in Ad Library →</a>
+        </article>
+      </div>
+      <div class="pg-foot"><span></span><span class="pn">14</span></div>
+    </article>
+
+    <!-- 15. Model routing -->
+    <article class="page">
+      <div class="pg-head"><span>Viktor.com · Paid acquisition teardown</span><span>Meta Ad Library · Oct 2026</span></div>
+      <h2 class="h-lg" style="margin-top:28px">Every top model <span class="mute">· routing angle</span></h2>
+      <p class="lede">Heavy in Sep – Oct. Viktor picks the model per task, so "which model" stops being the buyer's problem.</p>
+      <div class="ad-grid-2">
+        <article class="ad-card">
+          <div class="ad-thumb pr">Static ad</div>
+          <span class="label">Model routing · Static</span>
+          <div class="q">"Picking a model shouldn't be a gamble. Viktor has all the top models built in and chooses the right one per task."</div>
+          <div class="meta">Viktor · Sep 29, 2026 – live · 8 versions · ID 1592582945414860</div>
+          <a class="link" href="https://www.facebook.com/ads/library/?id=1592582945414860" target="_blank" rel="noopener">open in Ad Library →</a>
+        </article>
+        <article class="ad-card">
+          <div class="ad-thumb pr" style="background:linear-gradient(135deg,#c7bdfd,#8d7fc0)">Static ad</div>
+          <span class="label">Model routing · Static</span>
+          <div class="q">"Viktor chooses the right model per task and returns the finished work. The model wars stop being your problem."</div>
+          <div class="meta">Viktor · Sep 2 – Sep 11, 2026 · 12 versions · ID 1082514880950390</div>
+          <a class="link" href="https://www.facebook.com/ads/library/?id=1082514880950390" target="_blank" rel="noopener">open in Ad Library →</a>
+        </article>
+      </div>
+      <div class="pg-foot"><span></span><span class="pn">15</span></div>
+    </article>
+
+    <!-- 16. Funding -->
+    <article class="page">
+      <div class="pg-head"><span>Viktor.com · Paid acquisition teardown</span><span>Meta Ad Library · Oct 2026</span></div>
+      <h2 class="h-lg" style="margin-top:28px">Funding &amp; momentum proof</h2>
+      <p class="lede">The raise ($75M → $87M) and the team count (45,000+ → 60,000+) are used as headlines and updated often.</p>
+      <div class="ad-grid-2">
+        <article class="ad-card">
+          <div class="ad-thumb pr" style="background:linear-gradient(135deg,#1a1a24,#37374a);color:#d3d1cf">Static · dark</div>
+          <span class="label">Funding proof · Static</span>
+          <div class="q">"Viktor raised $75M because the work he returns is real. 45,000+ teams already know."</div>
+          <div class="meta">Viktor · Aug 18 – Aug 29, 2026 · 6 versions · ID 1384045167124170</div>
+          <a class="link" href="https://www.facebook.com/ads/library/?id=1384045167124170" target="_blank" rel="noopener">open in Ad Library →</a>
+        </article>
+        <article class="ad-card">
+          <div class="ad-thumb pr" style="background:linear-gradient(135deg,#dfb787,#b17b4a);color:#5a3a1a">Static · warm</div>
+          <span class="label">Funding proof · Static</span>
+          <div class="q">"Serious backing, simple promise. Viktor takes the busywork and your team keeps the judgment calls." $87M raised.</div>
+          <div class="meta">Viktor · Oct 12, 2026 – live · 1 version · ID 1109047728750055</div>
+          <a class="link" href="https://www.facebook.com/ads/library/?id=1109047728750055" target="_blank" rel="noopener">open in Ad Library →</a>
+        </article>
+      </div>
+      <div class="pg-foot"><span></span><span class="pn">16</span></div>
+    </article>
+
+    <!-- 17. UGC hooks & foils -->
+    <article class="page">
+      <div class="pg-head"><span>Viktor.com · Paid acquisition teardown</span><span>Meta Ad Library · Oct 2026</span></div>
+      <h2 class="h-lg" style="margin-top:28px">May–Jul: UGC hooks &amp; competitor foils</h2>
+      <p class="lede">Spring curiosity hooks: 72% of hooks in June, 8% by October. ChatGPT and OpenClaw are named on purpose (mirrors the /compare pages).</p>
+      <div class="ad-grid-2">
+        <article class="ad-card">
+          <div class="ad-thumb vd">UGC thumbnail<div class="ad-badge">Video · 0:32</div></div>
+          <span class="label">UGC curiosity hook</span>
+          <div class="q">"I Stopped Using ChatGPT After This…"</div>
+          <div class="meta">Viktor · May 7 – May 30, 2026 · 3 versions · ID 986210853865092</div>
+          <a class="link" href="https://www.facebook.com/ads/library/?id=986210853865092" target="_blank" rel="noopener">▶ watch video in Ad Library →</a>
+        </article>
+        <article class="ad-card">
+          <div class="ad-thumb vd">UGC thumbnail<div class="ad-badge">Video · 0:21</div></div>
+          <span class="label">UGC · Competitor foil</span>
+          <div class="q">"OpenClaw Is Cool… But Is It Safe?"</div>
+          <div class="meta">Viktor · Jun 3 – Jun 30, 2026 · 4 versions · ID 1294773076178802</div>
+          <a class="link" href="https://www.facebook.com/ads/library/?id=1294773076178802" target="_blank" rel="noopener">▶ watch video in Ad Library →</a>
+        </article>
+      </div>
+      <div class="pg-foot"><span></span><span class="pn">17</span></div>
+    </article>
+
+    <!-- 18. Carousel -->
+    <article class="page">
+      <div class="pg-head"><span>Viktor.com · Paid acquisition teardown</span><span>Meta Ad Library · Oct 2026</span></div>
+      <h2 class="h-lg" style="margin-top:28px">Testimonial carousel <span class="mute">· 5 cards</span></h2>
+      <p class="lede">Sep 30 – Oct 8, 2026 · 8 versions · <a href="https://www.facebook.com/ads/library/" target="_blank" rel="noopener" style="color:var(--accent)">open in Ad Library →</a></p>
+      <div class="car-row">
+        <div class="car-card"><div class="wm">viktor.com</div><div class="q">They added Viktor to the team</div></div>
+        <div class="car-card"><div class="wm">viktor.com</div><div class="q">Publisher: daily news → WordPress</div></div>
+        <div class="car-card"><div class="wm">viktor.com</div><div class="q">Ops lead: 300 hours a month saved</div></div>
+        <div class="car-card"><div class="wm">viktor.com</div><div class="q">Team lead: 40% savings in 5 min</div></div>
+        <div class="car-card"><div class="wm">viktor.com</div><div class="q">Hire your best AI employee</div></div>
+      </div>
+      <div class="pg-foot"><span></span><span class="pn">18</span></div>
+    </article>
+
+    <!-- 19. Formats & testing -->
+    <article class="page">
+      <div class="pg-head"><span>Viktor.com · Paid acquisition teardown</span><span>Meta Ad Library · Oct 2026</span></div>
+      <h2 class="h-lg" style="margin-top:28px">Formats &amp; testing system</h2>
+      <div class="two-col">
+        <div class="col">
+          <span class="cap">Formats</span>
+          <div class="stacks">
+            <div class="s"><strong>Mix</strong><span>~50/50 video vs static. Template barely changes: native Slack exchange, short benefit line, "VIKTOR.COM" card.</span></div>
+            <div class="s"><strong>Length</strong><span>Brand videos 0:08–0:55, hook-first ("POV: you counted your open tabs…"). Creator videos 0:19–3:00, median 1:20.</span></div>
+            <div class="s"><strong>Product as creative</strong><span>User @mentions Viktor, Viktor replies with numbers, a PDF or a link.</span></div>
+            <div class="s"><strong>Copy formula</strong><span>Quantified pain → "AI employee in Slack or Teams" → proof number (45,000+ → 60,000+ teams) → viktor.com.</span></div>
+          </div>
+        </div>
+        <div class="col">
+          <span class="cap">Testing loop</span>
+          <div class="stacks">
+            <div class="s"><strong>Volume</strong><span>~90 new concepts a week at the September peak; 1 in 4 got a single ad.</span></div>
+            <div class="s"><strong>Winner relaunches</strong><span>103 concepts ran in 3+ months, relaunched month after month.</span></div>
+            <div class="s"><strong>Short flights</strong><span>Most new ads off within a day (61–75% in Jul – Sep).</span></div>
+            <div class="s"><strong>Placements</strong><span>Advantage+ placements (3–4 Meta platforms per card). No placement-specific creative found.</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="pg-foot"><span></span><span class="pn">19</span></div>
+    </article>
+
+    <!-- 20. Creator / affiliate -->
+    <article class="page">
+      <div class="pg-head"><span>Viktor.com · Paid acquisition teardown</span><span>Meta Ad Library · Oct 2026</span></div>
+      <h2 class="h-lg" style="margin-top:28px">Creator, partner &amp; affiliate ads <span class="mute">· ~60 cards</span></h2>
+      <table class="angles-tbl">
+        <thead><tr><th>Advertiser</th><th style="width:16%">Type</th><th style="width:40%">What they run</th><th style="width:16%">Destination</th></tr></thead>
+        <tbody>
+          <tr><td>Mina Elias (Trivium Group)</td><td>Partnership + own ads</td><td class="q">~20 cards. Founder testimonial, then reseller pitch: "Viktor pays partners 20% of usage", "$38,000 in the last 30 days".</td><td>ref.viktor.com/mina, /ID2020, YouTube</td></tr>
+          <tr><td>Mitch Conquer</td><td>Partnership</td><td class="q">Case studies: "$19,000 in payroll saved", "$30,000 portal built in seven minutes" (1:03–1:13)</td><td>ref.viktor.com/ID1830, /ID1831</td></tr>
+          <tr><td>Ali Abdaal</td><td>Partnership</td><td class="q">"Comment VIKTOR for $100 worth of free work" + one-week diary (1:19–1:34), Aug 18 – Sep 18</td><td>viktor.com</td></tr>
+          <tr><td>Beca_Tries, Lead Gen Man</td><td>Partnership</td><td class="q">Operator UGC: "I let an AI employee handle a report that cost my team four hours every week"</td><td>viktor.com</td></tr>
+          <tr><td>Fryd Wiatrowski (CEO)</td><td>Founder page</td><td class="q">"We raised $75 million with one goal: an AI employee for every company" (later updated to $87M)</td><td>viktor.com</td></tr>
+          <tr><td>Agency Mavericks (Troy Dean)</td><td>Affiliate</td><td class="q">"$100K+ in 30 days setting up AI employees", comment-to-get-guide</td><td>theheadlessagency.com</td></tr>
+          <tr><td>Brice Gump, Narrative Ops</td><td>Affiliate</td><td class="q">Comment-bait, Spanish "$100 gratis", "Free to start, no card needed"</td><td>ref.viktor.com/scale-media</td></tr>
+        </tbody>
+      </table>
+      <div class="pg-foot"><span></span><span class="pn">20</span></div>
+    </article>
+
+    <!-- CLOSING -->
+    <article class="page" style="border-bottom:0">
+      <div class="closing">
+        <div class="closing-inner">
+          <span class="cap" style="color:rgba(255,255,255,.55)">Let's talk</span>
+          <h2 style="margin-top:14px">Turn competitive insights into growth.</h2>
+          <p>We take apart competitors' ad machines and build yours: creative testing loops, paid acquisition, funnels. Paid ads experts from YC managing $20M+ in marketing spend.</p>
+          <div class="cta">
+            <a class="btn-purple" href="mailto:hello@humans2.ai?subject=Growth%20call%20with%20humans2&body=I%20just%20read%20the%20Viktor.com%20teardown.%20Here's%20what%20we're%20working%20on%3A">
+              Book a discovery call →
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
 <script>
-// Calm Three.js background — matches main site, lighter density.
+// Three.js background — only shown on gate (fixed canvas, teardown has its own white layer with z-index 5).
 (function(){
   if(!window.THREE) return;
-  var canvas=document.getElementById('bg');
-  var renderer;
+  var canvas=document.getElementById('bg'); var renderer;
   try{ renderer=new THREE.WebGLRenderer({canvas:canvas,antialias:true,alpha:true,powerPreference:'high-performance'}); }
   catch(e){ canvas.style.display='none'; return; }
   var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
-  var scene=new THREE.Scene();
-  scene.fog=new THREE.FogExp2(0x000000,0.11);
-  var camera=new THREE.PerspectiveCamera(55,1,0.1,100);
-  camera.position.set(0,0,9);
-
+  var scene=new THREE.Scene(); scene.fog=new THREE.FogExp2(0x000000,0.11);
+  var camera=new THREE.PerspectiveCamera(55,1,0.1,100); camera.position.set(0,0,9);
   var group=new THREE.Group(); scene.add(group);
-  var outer=new THREE.Mesh(new THREE.IcosahedronGeometry(3.6,2),
-    new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true,transparent:true,opacity:0.055}));
-  group.add(outer);
-  var core=new THREE.Mesh(new THREE.IcosahedronGeometry(1.4,1),
-    new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true,transparent:true,opacity:0.18}));
+  group.add(new THREE.Mesh(new THREE.IcosahedronGeometry(3.6,2), new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true,transparent:true,opacity:0.055})));
+  var core=new THREE.Mesh(new THREE.IcosahedronGeometry(1.4,1), new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true,transparent:true,opacity:0.18}));
   group.add(core);
-
-  (function(){
-    var n=1000,pos=new Float32Array(n*3);
-    for(var i=0;i<n;i++){pos[i*3]=(Math.random()-0.5)*60;pos[i*3+1]=(Math.random()-0.5)*40;pos[i*3+2]=-10-Math.random()*40;}
-    var g=new THREE.BufferGeometry(); g.setAttribute('position',new THREE.BufferAttribute(pos,3));
-    scene.add(new THREE.Points(g,new THREE.PointsMaterial({color:0xffffff,size:0.05,transparent:true,opacity:0.4,depthWrite:false})));
-  })();
-
+  var n=1000,pos=new Float32Array(n*3);
+  for(var i=0;i<n;i++){pos[i*3]=(Math.random()-0.5)*60;pos[i*3+1]=(Math.random()-0.5)*40;pos[i*3+2]=-10-Math.random()*40;}
+  var g=new THREE.BufferGeometry(); g.setAttribute('position',new THREE.BufferAttribute(pos,3));
+  scene.add(new THREE.Points(g,new THREE.PointsMaterial({color:0xffffff,size:0.05,transparent:true,opacity:0.4,depthWrite:false})));
   var mx=0,my=0,tx=0,ty=0;
   window.addEventListener('pointermove',function(e){tx=(e.clientX/window.innerWidth-0.5);ty=(e.clientY/window.innerHeight-0.5);},{passive:true});
   function resize(){var w=window.innerWidth,h=window.innerHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();
     group.position.y = w<640 ? 0.4 : 0; group.scale.setScalar(w<640?0.75:0.95);}
   window.addEventListener('resize',resize); resize();
-
   var t0=performance.now();
-  function frame(now){
-    var t=(now-t0)/1000;
-    mx+=(tx-mx)*0.04; my+=(ty-my)*0.04;
-    if(!reduced){
-      outer.rotation.y=t*0.04; outer.rotation.x=Math.sin(t*0.07)*0.18;
-      core.rotation.y=-t*0.14; core.rotation.z=t*0.08;
-    }
-    group.rotation.y+= (mx*0.5-group.rotation.y)*0.05;
-    group.rotation.x+= (my*0.3-group.rotation.x)*0.05;
-    renderer.render(scene,camera);
-    requestAnimationFrame(frame);
+  function frame(now){ var t=(now-t0)/1000; mx+=(tx-mx)*0.04; my+=(ty-my)*0.04;
+    if(!reduced){ group.children[0].rotation.y=t*0.04; group.children[0].rotation.x=Math.sin(t*0.07)*0.18; core.rotation.y=-t*0.14; core.rotation.z=t*0.08; }
+    group.rotation.y+= (mx*0.5-group.rotation.y)*0.05; group.rotation.x+= (my*0.3-group.rotation.x)*0.05;
+    renderer.render(scene,camera); requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
 })();
 
-// Gate: email in → teardown reveals.
+// Gate → teardown reveal
 (function(){
   var form=document.getElementById('leadForm');
   var status=document.getElementById('status');
   var btn=document.getElementById('submitBtn');
   var gate=document.getElementById('gate');
   var teardown=document.getElementById('teardown');
+  var bg=document.getElementById('bg');
+  var vg=document.querySelector('.vignette');
+  var gr=document.querySelector('.grain');
 
-  function setStatus(msg,kind){
-    status.textContent=msg||'';
-    status.className='status'+(kind?' '+kind:'');
-  }
+  function setStatus(msg,kind){ status.textContent=msg||''; status.className='status'+(kind?' '+kind:''); }
 
-  // If user already unlocked (returning visitor), show content immediately.
   try{
-    if(sessionStorage.getItem('h2_unlocked')==='1' || location.search.indexOf('unlocked=1')>=0){
-      reveal(true);
-    }
+    if(sessionStorage.getItem('h2_unlocked')==='1' || location.search.indexOf('unlocked=1')>=0){ reveal(true); }
   }catch(e){}
 
   form.addEventListener('submit', async function(e){
     e.preventDefault();
     var email=document.getElementById('email').value.trim();
-    var honeypot=document.getElementById('company').value.trim();
-
-    if(honeypot){ reveal(); return; }
-    if(!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
-      setStatus('Please enter a valid email.','err'); return;
-    }
-
-    btn.disabled=true;
-    setStatus('Unlocking…');
-
-    var payload={email:email,source:'lead-magnet-viktor-teardown',ts:new Date().toISOString()};
-
+    var hp=document.getElementById('company').value.trim();
+    if(hp){ reveal(); return; }
+    if(!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ setStatus('Please enter a valid email.','err'); return; }
+    btn.disabled=true; setStatus('Unlocking…');
     try{
-      var r=await fetch('/api/lead',{
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body:JSON.stringify(payload)
-      });
-      // Reveal even on non-200 — email is captured on the client, we don't want to block UX.
-      reveal();
-    }catch(err){
-      // Still reveal; we'll retry capture via mailto beacon in a sec if needed.
-      reveal();
-    }
+      await fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,source:'lead-magnet-viktor-teardown',ts:new Date().toISOString()})});
+    }catch(err){}
+    reveal();
   });
 
   function reveal(skipScroll){
     try{ sessionStorage.setItem('h2_unlocked','1'); }catch(e){}
     gate.style.display='none';
+    if(bg) bg.style.display='none';
+    if(vg) vg.style.display='none';
+    if(gr) gr.style.display='none';
+    document.body.style.background='#fff';
     teardown.classList.add('show');
     teardown.setAttribute('aria-hidden','false');
     try{ history.replaceState(null,'',location.pathname+'?unlocked=1'); }catch(e){}
