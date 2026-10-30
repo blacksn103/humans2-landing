@@ -2,11 +2,15 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/lead-magnet", "destination": "/lead-magnet.html" }
+    { "source": "/viktor-paid-playbook", "destination": "/viktor-paid-playbook.html" }
+  ],
+  "redirects": [
+    { "source": "/lead-magnet", "destination": "/viktor-paid-playbook", "permanent": true },
+    { "source": "/lead-magnet.html", "destination": "/viktor-paid-playbook", "permanent": true }
   ],
   "headers": [
     {
-      "source": "/lead-magnet(.html)?",
+      "source": "/viktor-paid-playbook(.html)?",
       "headers": [
         { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive, nosnippet" },
         { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
