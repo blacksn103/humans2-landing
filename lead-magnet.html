@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Viktor.com paid acquisition teardown · by humans²</title>
-<meta name="description" content="A full teardown of Viktor.com's $830 live-ad Meta machine: 2,000 ads, 1,119 copies of their #1 concept, every angle, LP and creative pattern — unpacked by humans².">
+<title>Viktor.com Paid Growth Playbook · humans²</title>
+<meta name="description" content="Inside the Meta Ads strategy of a $75M-raised AI startup. 25 slides. Real ad creatives, messaging angles, landing pages and testing patterns — decoded by humans².">
 <meta name="robots" content="nofollow">
 <link rel="canonical" href="https://humans2.ai/lead-magnet">
 
 <meta property="og:site_name" content="humans²">
-<meta property="og:title" content="Viktor.com paid acquisition teardown · by humans²">
-<meta property="og:description" content="2,000 ads, 1,119 copies of one winning concept, 60% of hooks swapped in 90 days. Full Meta Ad Library teardown. Enter your email, read it in-browser.">
+<meta property="og:title" content="Viktor.com Paid Growth Playbook · humans²">
+<meta property="og:description" content="Inside the Meta Ads strategy of a $75M-raised AI startup. 25 slides. Real ad creatives, messaging angles, landing pages and testing patterns.">
 <meta property="og:url" content="https://humans2.ai/lead-magnet">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
@@ -19,312 +19,398 @@
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Viktor.com paid acquisition teardown — a humans² competitor teardown">
+<meta property="og:image:alt" content="Viktor.com Paid Growth Playbook — by humans²">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Viktor.com paid acquisition teardown · by humans²">
-<meta name="twitter:description" content="2,000 ads · 1,119 copies of the #1 concept · 60%+ hook turnover in 90 days.">
+<meta name="twitter:title" content="Viktor.com Paid Growth Playbook · humans²">
+<meta name="twitter:description" content="Inside the Meta Ads strategy of a $75M-raised AI startup. 25 slides.">
 <meta name="twitter:image" content="https://humans2.ai/og/lead-magnet.png">
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Viktor.com paid acquisition teardown","description":"A full teardown of Viktor.com's Meta ad machine.","image":"https://humans2.ai/og/lead-magnet.png","author":{"@type":"Organization","name":"humans²","url":"https://humans2.ai"},"publisher":***"@type":"Organization","name":"humans²","url":"https://humans2.ai","logo":***"@type":"ImageObject","url":"https://humans2.ai/og/lead-magnet.png"}},"datePublished":"2026-10-29","inLanguage":"en","mainEntityOfPage":"https://humans2.ai/lead-magnet"}
+{"@context":"https://schema.org","@type":"Article","headline":"Viktor.com Paid Growth Playbook","description":"Inside the Meta Ads strategy of a $75M-raised AI startup.","image":"https://humans2.ai/og/lead-magnet.png","author":{"@type":"Organization","name":"humans²","url":"https://humans2.ai"},"publisher":***"@type":"Organization","name":"humans²","url":"https://humans2.ai","logo":***"@type":"ImageObject","url":"https://humans2.ai/og/lead-magnet.png"}},"datePublished":"2026-10-29","inLanguage":"en","mainEntityOfPage":"https://humans2.ai/lead-magnet"}
 </script>
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='%23fff' text-anchor='middle'%3EH%C2%B2%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- Preload first page so there's no flash of empty space on reveal -->
+<link rel="preload" as="image" href="/og/hero-collage.jpg">
 <link rel="preload" as="image" href="/og/pages/p-01.jpg">
+
+<!-- Calendly bundle -->
+<link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
 
 <style>
   :root{
-    --bg:#000; --fg:#fff; --muted:rgba(255,255,255,.62); --dim:rgba(255,255,255,.38); --line:rgba(255,255,255,.12);
+    --bg:#000; --fg:#fff; --muted:rgba(255,255,255,.62); --dim:rgba(255,255,255,.38); --line:rgba(255,255,255,.08);
     --serif:"Instrument Serif",Georgia,serif;
     --sans:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-    --accent:#5b2fd6;
+    --accent:#7c54ff;        /* brighter violet, pops on black */
+    --accent-deep:#5b2fd6;
+    --accent-soft:rgba(124,84,255,.18);
+    --card:rgba(255,255,255,.03);
+    --card-br:rgba(255,255,255,.08);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   html,body{min-height:100%;background:var(--bg);color:var(--fg);font-family:var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
   body{overflow-x:hidden}
+  a{color:inherit}
 
-  /* ================= GATE (dark humans² hero) ================= */
-  #bg{position:fixed;inset:0;z-index:0;display:block}
-  .vignette{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 35%,rgba(0,0,0,.78) 100%)}
-  .grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  /* Shared page chrome */
+  .site-header{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:22px clamp(20px,4vw,56px);background:rgba(0,0,0,.72);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.05)}
+  .site-header .logo{font-family:var(--serif);font-size:26px;color:var(--fg);text-decoration:none;display:flex;align-items:baseline;gap:1px}
+  .site-header .logo sup{font-size:.62em;position:relative;top:-.15em}
+  .site-header .nav-cta{font-size:13.5px;color:var(--fg);text-decoration:none;padding:9px 18px;border:1px solid var(--line);border-radius:999px;transition:border-color .2s,background .2s}
+  .site-header .nav-cta:hover{border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.04)}
+  .site-footer{padding:28px clamp(20px,4vw,56px);font-size:12.5px;color:var(--dim);border-top:1px solid rgba(255,255,255,.05);display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .site-footer a{color:var(--dim);text-decoration:none}
+  .site-footer a:hover{color:var(--fg)}
 
-  .gate{position:relative;z-index:2;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
-  .gate header{display:flex;align-items:center;justify-content:space-between;padding:28px clamp(20px,4vw,56px)}
-  .gate .logo{font-family:var(--serif);font-size:28px;color:var(--fg);text-decoration:none;display:flex;align-items:baseline;gap:1px}
-  .gate .logo sup{font-size:.62em;position:relative;top:-.15em}
-  .gate .nav-cta{font-size:14px;color:var(--fg);text-decoration:none;padding:9px 16px;border:1px solid var(--line);border-radius:999px;backdrop-filter:blur(6px)}
-  .gate .nav-cta:hover{border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.05)}
-  .gate-main{flex:1;display:flex;align-items:center;justify-content:center;padding:40px clamp(20px,4vw,56px) 80px}
-  .gate-shell{width:min(760px,100%);text-align:center}
-  .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);margin-bottom:24px;display:inline-flex;align-items:center;gap:12px}
-  .eyebrow::before,.eyebrow::after{content:"";width:28px;height:1px;background:var(--line)}
-  .gate h1{font-family:var(--serif);font-weight:400;letter-spacing:-.025em;line-height:1.02;font-size:clamp(42px,6.4vw,76px);max-width:18ch;margin:0 auto;text-wrap:balance}
-  .gate h1 em{font-style:italic;color:rgba(255,255,255,.9)}
-  .gate .sub{margin:22px auto 0;max-width:56ch;font-size:clamp(15px,1.2vw,18px);line-height:1.55;color:var(--muted);text-wrap:pretty}
-  .gate .sub strong{color:var(--fg);font-weight:500}
-  .stat-strip{margin:36px auto 0;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 32px;max-width:620px}
-  .stat-strip div{display:flex;flex-direction:column;align-items:center;min-width:120px}
-  .stat-strip b{font-family:var(--serif);font-weight:400;font-size:clamp(28px,4vw,38px);line-height:1}
-  .stat-strip small{margin-top:6px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
-  form{margin:40px auto 0;width:min(480px,100%);display:flex;flex-direction:column;gap:14px;text-align:left}
-  .field{display:flex;flex-direction:column;gap:8px}
-  label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
-  input[type=email]{width:100%;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;color:var(--fg);font:inherit;font-size:15px;padding:14px 16px;outline:none;backdrop-filter:blur(10px)}
-  input::placeholder{color:rgba(255,255,255,.32)}
-  input:focus{border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.06);box-shadow:0 0 0 4px rgba(255,255,255,.05)}
+  .wrap{width:min(1120px,100%);margin:0 auto;padding:0 clamp(20px,4vw,40px)}
+
+  /* ========== HERO ========== */
+  .hero{position:relative;padding:72px 0 56px;overflow:hidden}
+  .hero::before{content:"";position:absolute;top:-20%;right:-10%;width:70%;height:120%;background:radial-gradient(circle,rgba(124,84,255,.22),rgba(124,84,255,0) 60%);pointer-events:none;z-index:0}
+  .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
+  .eyebrow{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);font-weight:600}
+  .hero h1{margin-top:20px;font-family:var(--sans);font-weight:700;font-size:clamp(44px,6vw,80px);line-height:1;letter-spacing:-.03em;text-wrap:balance}
+  .hero h1 .brand{color:var(--accent);font-family:var(--sans);font-weight:700;display:inline}
+  .hero h1 .brand sup{font-size:.5em;position:relative;top:-.2em;font-weight:400;opacity:.75;letter-spacing:0}
+  .hero .sub{margin-top:22px;max-width:52ch;font-size:clamp(16px,1.3vw,19px);line-height:1.5;color:var(--muted)}
+  .hero .sub strong{color:var(--fg);font-weight:500}
+  .hero-form{margin-top:32px;max-width:460px}
+  .hero-pill{display:flex;align-items:center;gap:0;background:rgba(255,255,255,.05);border:1px solid var(--card-br);border-radius:999px;padding:5px 5px 5px 20px;transition:border-color .2s,background .2s}
+  .hero-pill:focus-within{border-color:rgba(124,84,255,.5);background:rgba(255,255,255,.07)}
+  .hero-pill input{flex:1;background:transparent;border:0;outline:0;color:var(--fg);font:inherit;font-size:14.5px;padding:12px 0;min-width:0}
+  .hero-pill input::placeholder{color:rgba(255,255,255,.35)}
+  .hero-pill button{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;border:0;border-radius:999px;padding:12px 20px;font:inherit;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background .2s,transform .2s,box-shadow .2s}
+  .hero-pill button:hover{background:#8d68ff;transform:translateY(-1px);box-shadow:0 10px 30px rgba(124,84,255,.3)}
+  .hero-pill button[disabled]{opacity:.55;cursor:not-allowed}
+  .micro{margin-top:12px;font-size:12.5px;color:var(--dim);line-height:1.5}
+  .status{margin-top:8px;min-height:22px;font-size:13.5px;color:var(--muted)}
+  .status.err{color:#ff9b9b}
+
+  .hero-visual{position:relative;z-index:1}
+  .hero-visual img{width:100%;height:auto;border-radius:16px;display:block;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.06),0 0 100px rgba(124,84,255,.15)}
   .hp{position:absolute;left:-9999px;top:-9999px;height:0;width:0;opacity:0}
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:999px;font-size:15px;font-weight:500;text-decoration:none;cursor:pointer;border:0;background:var(--fg);color:#000;width:100%;transition:transform .25s,box-shadow .25s}
-  .btn:hover{transform:translateY(-1px);box-shadow:0 0 40px rgba(255,255,255,.25)}
-  .btn[disabled]{opacity:.55;cursor:not-allowed}
-  .btn svg{width:16px;height:16px}
-  .micro{font-size:12.5px;color:var(--dim);line-height:1.5;text-align:center;margin-top:6px}
-  .status{margin-top:8px;min-height:22px;font-size:14px;color:var(--muted);text-align:center}
-  .status.ok{color:#9bffb0} .status.err{color:#ff9b9b}
-  .gate footer{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px clamp(20px,4vw,56px);font-size:12.5px;color:var(--dim);border-top:1px solid rgba(255,255,255,.06)}
-  .gate footer a{color:var(--dim);text-decoration:none}
-  .gate footer a:hover{color:var(--fg)}
-  .reveal{opacity:0;transform:translateY(14px);animation:up .9s cubic-bezier(.2,.7,.2,1) forwards}
-  .d1{animation-delay:.08s}.d2{animation-delay:.22s}.d3{animation-delay:.36s}.d4{animation-delay:.5s}.d5{animation-delay:.64s}
-  @keyframes up{to{opacity:1;transform:none}}
 
-  /* ================= TEARDOWN (PDF pages as images) ================= */
-  .teardown{display:none;position:relative;z-index:5;background:#0a0a0a;color:#f3efe6;font-family:var(--sans);overflow-x:hidden;min-height:100vh}
-  .teardown.show{display:block;animation:fadeIn .5s ease}
-  @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+  /* ========== WHAT'S INSIDE ========== */
+  .inside{padding:80px 0 60px;border-top:1px solid var(--line)}
+  .section-head{text-align:center;max-width:620px;margin:0 auto 44px}
+  .section-head h2{font-family:var(--sans);font-weight:700;font-size:clamp(32px,4.2vw,46px);letter-spacing:-.025em;line-height:1.05}
+  .section-head p{margin-top:14px;color:var(--muted);font-size:16px;line-height:1.55}
+  .ins-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:1px solid var(--card-br);border-radius:18px;overflow:hidden;background:var(--card)}
+  .ins-cell{padding:28px 26px 30px;border-right:1px solid var(--card-br);border-bottom:1px solid var(--card-br)}
+  .ins-cell:nth-child(3n){border-right:0}
+  .ins-cell:nth-last-child(-n+3){border-bottom:0}
+  .ins-cell .n{color:var(--accent);font-weight:600;font-size:13px;letter-spacing:.08em;margin-bottom:14px}
+  .ins-cell h3{font-size:17px;font-weight:600;letter-spacing:-.01em;margin-bottom:10px;color:var(--fg)}
+  .ins-cell p{font-size:14px;line-height:1.55;color:var(--muted)}
 
-  .tr-header{display:flex;align-items:center;justify-content:space-between;padding:22px clamp(20px,4vw,56px);border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;background:rgba(10,10,10,.92);backdrop-filter:blur(12px);z-index:10}
-  .tr-header .logo{font-family:var(--serif);font-size:24px;color:#f3efe6;text-decoration:none;display:flex;align-items:baseline;gap:1px}
-  .tr-header .logo sup{font-size:.62em;position:relative;top:-.15em}
-  .tr-header .meta{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(243,239,230,.55);text-align:right;line-height:1.4}
-  .tr-header .meta span{display:block}
-  .tr-header .meta .t{color:#f3efe6}
+  /* ========== LOCKED PREVIEW ========== */
+  .preview{padding:60px 0 80px;position:relative}
+  .preview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;filter:blur(8px) brightness(.55);pointer-events:none;user-select:none;max-height:520px;overflow:hidden;mask-image:linear-gradient(180deg,#000 0,#000 70%,transparent 100%);-webkit-mask-image:linear-gradient(180deg,#000 0,#000 70%,transparent 100%)}
+  .preview-grid .pt{aspect-ratio:1467/825;background:#f6f6f5;border-radius:8px;overflow:hidden}
+  .preview-grid .pt img{width:100%;height:100%;object-fit:cover;display:block}
+  .preview-lock{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 20px}
+  .preview-lock .lock{width:48px;height:48px;border-radius:14px;background:rgba(124,84,255,.14);border:1px solid rgba(124,84,255,.3);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+  .preview-lock .lock svg{width:22px;height:22px;color:var(--accent)}
+  .preview-lock h3{font-family:var(--sans);font-weight:700;font-size:clamp(28px,3.4vw,38px);letter-spacing:-.02em;line-height:1.1;max-width:16ch}
+  .preview-lock p{margin-top:12px;color:var(--muted);font-size:15px;max-width:40ch;line-height:1.5}
+  .preview-lock .lock-form{margin-top:28px;width:min(460px,100%)}
 
-  .pdf-wrap{padding:48px clamp(16px,3vw,40px) 24px;display:flex;flex-direction:column;align-items:center;gap:24px}
-  .pdf-page{width:min(1120px,100%);aspect-ratio:1467/825;background:#f6f6f5;border-radius:10px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.04);position:relative}
+  /* ========== UNLOCKED DECK ========== */
+  .deck-section{display:none;padding:60px 0 80px;border-top:1px solid var(--line)}
+  .deck-section.show{display:block;animation:fadeIn .5s ease}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .deck-head{text-align:center;margin-bottom:40px}
+  .deck-head .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:rgba(124,84,255,.14);border:1px solid rgba(124,84,255,.3);color:var(--accent);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-radius:999px}
+  .deck-head h2{margin-top:16px;font-weight:700;font-size:clamp(32px,4.2vw,46px);letter-spacing:-.025em;line-height:1.05}
+  .deck-head p{margin-top:12px;color:var(--muted);font-size:16px}
+  .pdf-stack{display:flex;flex-direction:column;gap:20px}
+  .pdf-page{aspect-ratio:1467/825;background:#f6f6f5;border-radius:10px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.04);position:relative}
   .pdf-page img{width:100%;height:100%;display:block;object-fit:cover}
-  .pdf-page .pn-badge{position:absolute;top:14px;left:14px;background:rgba(10,10,10,.65);backdrop-filter:blur(8px);color:#f3efe6;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;padding:7px 11px;border-radius:999px;font-weight:600;opacity:0;transition:opacity .25s;z-index:2}
+  .pdf-page .pn-badge{position:absolute;top:12px;left:12px;background:rgba(10,10,10,.65);backdrop-filter:blur(8px);color:#f3efe6;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;padding:6px 10px;border-radius:999px;font-weight:600;opacity:0;transition:opacity .25s}
   .pdf-page:hover .pn-badge{opacity:1}
 
-  /* Closing CTA under the deck */
-  .tr-cta{margin:40px auto 0;width:min(1120px,100%);padding:56px clamp(28px,5vw,72px);background:linear-gradient(135deg,rgba(91,47,214,.25),rgba(91,47,214,0) 60%),rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:18px;text-align:left;position:relative;overflow:hidden}
-  .tr-cta::before{content:"";position:absolute;top:-30%;right:-10%;width:60%;height:160%;background:radial-gradient(circle,rgba(91,47,214,.35),rgba(91,47,214,0) 60%);pointer-events:none}
-  .tr-cta > *{position:relative;z-index:2}
-  .tr-cta .cap{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(243,239,230,.55);font-weight:600}
-  .tr-cta h2{margin-top:14px;font-family:var(--serif);font-weight:400;font-size:clamp(36px,5.4vw,60px);line-height:1.02;letter-spacing:-.025em;max-width:16ch;text-wrap:balance}
-  .tr-cta h2 em{font-style:italic;color:#fff}
-  .tr-cta p{margin-top:18px;max-width:54ch;color:rgba(243,239,230,.72);font-size:16px;line-height:1.55}
-  .tr-cta .cta-row{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-  .btn-purple{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;background:var(--accent);color:#fff;font-weight:600;font-size:15px;text-decoration:none;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s}
-  .btn-purple:hover{transform:translateY(-1px);box-shadow:0 10px 40px rgba(91,47,214,.4)}
-  .btn-ghost{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;background:transparent;color:#f3efe6;font-weight:500;font-size:14px;text-decoration:none;border:1px solid rgba(255,255,255,.18);transition:border-color .2s,background .2s}
-  .btn-ghost:hover{border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.05)}
+  /* ========== CTA + CALENDLY ========== */
+  .cta-section{position:relative;padding:90px 0;border-top:1px solid var(--line);overflow:hidden}
+  .cta-section::before{content:"";position:absolute;top:-30%;right:-10%;width:60%;height:160%;background:radial-gradient(circle,rgba(124,84,255,.28),rgba(124,84,255,0) 60%);pointer-events:none;z-index:0}
+  .cta-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:start}
+  .cta-copy .eyebrow{color:var(--accent)}
+  .cta-copy h2{margin-top:18px;font-family:var(--sans);font-weight:700;font-size:clamp(36px,5vw,56px);letter-spacing:-.025em;line-height:1.03;max-width:14ch;text-wrap:balance}
+  .cta-copy h2 em{font-style:italic;color:var(--accent)}
+  .cta-copy p{margin-top:20px;max-width:48ch;color:var(--muted);font-size:16px;line-height:1.6}
+  .cta-copy p strong{color:var(--fg);font-weight:600}
+  .cta-copy .bullets{margin-top:24px;display:grid;gap:12px}
+  .cta-copy .bullets li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:var(--muted);line-height:1.5}
+  .cta-copy .bullets svg{flex:0 0 auto;width:18px;height:18px;color:var(--accent);margin-top:2px}
+  .cta-copy .fallback-btn{margin-top:28px;display:inline-flex;align-items:center;gap:10px;padding:14px 24px;background:var(--accent);color:#fff;font-weight:600;font-size:14.5px;text-decoration:none;border-radius:999px;transition:background .2s,transform .2s,box-shadow .2s}
+  .cta-copy .fallback-btn:hover{background:#8d68ff;transform:translateY(-1px);box-shadow:0 10px 30px rgba(124,84,255,.3)}
+  .calendly-wrap{background:rgba(255,255,255,.03);border:1px solid var(--card-br);border-radius:18px;overflow:hidden;min-height:680px;position:relative}
+  .calendly-inline-widget{min-width:320px;height:680px}
+  .calendly-fallback{padding:30px;text-align:center}
+  .calendly-fallback h4{font-size:18px;font-weight:600;margin-bottom:10px}
+  .calendly-fallback p{color:var(--muted);font-size:14px;margin-bottom:20px}
 
-  .tr-footer{margin:60px auto 0;width:min(1120px,100%);padding:22px clamp(16px,3vw,40px) 30px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:12.5px;color:rgba(243,239,230,.4);border-top:1px solid rgba(255,255,255,.06)}
-  .tr-footer a{color:rgba(243,239,230,.4);text-decoration:none}
-  .tr-footer a:hover{color:#f3efe6}
-
+  /* Responsive */
   @media (max-width:900px){
-    .pdf-wrap{padding:24px 12px 16px;gap:16px}
-    .pdf-page{border-radius:6px}
-    .tr-cta{padding:36px 24px;border-radius:14px}
-    .tr-header .meta{font-size:10px}
+    .hero-grid,.cta-grid{grid-template-columns:1fr;gap:40px}
+    .hero-visual{order:-1}
+    .ins-grid{grid-template-columns:1fr}
+    .ins-cell{border-right:0 !important;border-bottom:1px solid var(--card-br) !important}
+    .ins-cell:last-child{border-bottom:0 !important}
+    .preview-grid{grid-template-columns:repeat(2,1fr);max-height:420px}
+    .calendly-inline-widget{height:600px}
   }
   @media (max-width:640px){
-    .gate header{padding:20px}
-    .gate-main{padding:28px 20px 60px;min-height:auto}
-    .tr-header{padding:16px 20px}
-    .tr-header .meta .d{display:none}
+    .hero{padding:48px 0 40px}
+    .inside,.preview,.cta-section,.deck-section{padding-top:48px;padding-bottom:48px}
+    .ins-cell{padding:22px 20px 24px}
+    .pdf-page{border-radius:6px}
+    .preview-grid{grid-template-columns:1fr;max-height:360px}
     .pdf-page .pn-badge{opacity:1}
-    .tr-footer{flex-direction:column;align-items:flex-start;gap:8px;padding:22px 20px 30px}
+    .site-footer{flex-direction:column;align-items:flex-start;gap:8px}
+    .calendly-inline-widget{height:720px}
   }
 </style>
 </head>
 <body>
-<canvas id="bg" aria-hidden="true"></canvas>
-<div class="vignette" aria-hidden="true"></div>
-<div class="grain" aria-hidden="true"></div>
 
-<!-- ================= GATE ================= -->
-<section class="gate" id="gate">
-  <header>
-    <a class="logo" href="/" aria-label="Humans squared">Humans<sup>2</sup></a>
-    <a class="nav-cta" href="mailto:hello@humans2.ai?subject=Growth%20call%20with%20humans2">Book a call</a>
-  </header>
-  <div class="gate-main">
-    <div class="gate-shell">
-      <div class="eyebrow reveal d1">Competitor teardown · October 2026</div>
-      <h1 class="reveal d2">We took apart <em>Viktor.com</em>'s Meta ad machine.</h1>
-      <p class="sub reveal d3">
-        2,000 ads. 1,119 launches of a single concept. 398 new ideas tested in a month. Every angle,
-        landing page, hook and creative — <strong>unpacked frame by frame</strong>. Drop your email, read it now.
-      </p>
-      <div class="stat-strip reveal d4">
-        <div><b>~2,000</b><small>ads all-time</small></div>
-        <div><b>~830</b><small>live on Oct 27</small></div>
-        <div><b>1,119</b><small>copies · #1 concept</small></div>
-        <div><b>398</b><small>new / month peak</small></div>
+<header class="site-header">
+  <a class="logo" href="/" aria-label="Humans squared">humans<sup>2</sup></a>
+  <a class="nav-cta" href="#calendly">Book a call</a>
+</header>
+
+<main>
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Paid acquisition teardown · 25 slides</div>
+          <h1><span class="brand">Viktor.com</span><br>Paid Growth Playbook</h1>
+          <p class="sub">Inside the Meta Ads strategy of a <strong>$75M-raised AI startup</strong>. 2,000 ads. 1,119 copies of one winning concept. 398 new ideas tested in a single month — <strong>decoded by humans²</strong>.</p>
+          <form class="hero-form" id="leadForm" novalidate>
+            <div class="hero-pill">
+              <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@company.com">
+              <button type="submit" id="submitBtn">
+                Get the playbook
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              </button>
+            </div>
+            <div class="hp" aria-hidden="true">
+              <label for="company">Company (leave empty)</label>
+              <input id="company" name="company" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <p class="micro">Free. Instant access, no spam.</p>
+            <div class="status" id="status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+        <div class="hero-visual">
+          <img src="/og/hero-collage.jpg" alt="Grid of Viktor.com Meta ad creatives" width="1600" height="1200" fetchpriority="high">
+        </div>
       </div>
-      <form id="leadForm" class="reveal d5" novalidate>
-        <div class="field">
-          <label for="email">Your email</label>
-          <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@company.com">
+    </div>
+  </section>
+
+  <!-- ========== WHAT'S INSIDE ========== -->
+  <section class="inside">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What's inside</h2>
+        <p>Real ad creatives, messaging angles, landing pages and testing patterns — decoded page by page.</p>
+      </div>
+      <div class="ins-grid">
+        <div class="ins-cell"><div class="n">01</div><h3>Creative testing at volume</h3><p>How 189–398 new concepts a month get shipped — and why hit rate still fell from 36% to 19%.</p></div>
+        <div class="ins-cell"><div class="n">02</div><h3>Scaling winning concepts</h3><p>One Slack demo, cloned 1,119 times. Up to 131 copies launched in a single day.</p></div>
+        <div class="ins-cell"><div class="n">03</div><h3>Messaging angles</h3><p>Eight angles with verbatim hooks: salary math, builds-software, model routing, funding proof.</p></div>
+        <div class="ins-cell"><div class="n">04</div><h3>Real ad creatives</h3><p>13 top-performing ads with Meta Ad Library IDs, formats, versions, launch dates.</p></div>
+        <div class="ins-cell"><div class="n">05</div><h3>Creator-powered acquisition</h3><p>How 60+ creator / partner / affiliate ads sit on top of the main machine (Ali Abdaal, Mina Elias, Mitch Conquer).</p></div>
+        <div class="ins-cell"><div class="n">06</div><h3>Landing pages &amp; offer</h3><p>Why one homepage does the work, and how "$100 free, no card" grew from 1% to 34% of hooks.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== LOCKED PREVIEW (hidden after unlock) ========== -->
+  <section class="preview" id="previewSection">
+    <div class="wrap" style="position:relative">
+      <div class="preview-grid" aria-hidden="true">
+        <div class="pt"><img src="/og/pages/p-03.jpg" alt=""></div>
+        <div class="pt"><img src="/og/pages/p-04.jpg" alt=""></div>
+        <div class="pt"><img src="/og/pages/p-05.jpg" alt=""></div>
+        <div class="pt"><img src="/og/pages/p-06.jpg" alt=""></div>
+        <div class="pt"><img src="/og/pages/p-07.jpg" alt=""></div>
+        <div class="pt"><img src="/og/pages/p-10.jpg" alt=""></div>
+      </div>
+      <div class="preview-lock">
+        <div class="lock" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V8a4 4 0 1 1 8 0v3"/></svg>
         </div>
-        <div class="hp" aria-hidden="true">
-          <label for="company">Company (leave empty)</label>
-          <input id="company" name="company" type="text" tabindex="-1" autocomplete="off">
+        <h3>Unlock all 25 slides</h3>
+        <p>Drop your email, read the full teardown right here — plus book a 20-min strategy call with us.</p>
+        <form class="lock-form hero-form" id="lockForm" novalidate>
+          <div class="hero-pill">
+            <input id="email2" name="email" type="email" required autocomplete="email" placeholder="you@company.com">
+            <button type="submit" id="submitBtn2">
+              Get the playbook
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </button>
+          </div>
+          <div class="hp" aria-hidden="true">
+            <input id="company2" name="company" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <p class="micro">Free. Instant access, no spam.</p>
+          <div class="status" id="status2" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== UNLOCKED PDF DECK ========== -->
+  <section class="deck-section" id="deckSection" aria-hidden="true">
+    <div class="wrap">
+      <div class="deck-head">
+        <span class="pill">The full teardown · 25 pages</span>
+        <h2>Viktor.com Paid Growth Playbook</h2>
+        <p>Scroll through every page below.</p>
+      </div>
+      <div class="pdf-stack" id="pdfStack"><!-- pages injected by JS --></div>
+    </div>
+  </section>
+
+  <!-- ========== CTA + CALENDLY ========== -->
+  <section class="cta-section" id="calendly">
+    <div class="wrap">
+      <div class="cta-grid">
+        <div class="cta-copy">
+          <div class="eyebrow">humans² · human × AI growth agency</div>
+          <h2>Get your paid growth <em>strategy</em>.</h2>
+          <p>We take apart competitors' ad machines and build yours: <strong>creative testing loops, paid acquisition, funnels</strong>. Paid ads experts from YC managing $20M+ in marketing spend.</p>
+          <ul class="bullets">
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 10 4 4 8-8"/></svg> 20-min strategy call — zero pitch, pure diagnosis</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 10 4 4 8-8"/></svg> We'll come with 2–3 specific plays for your product</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 10 4 4 8-8"/></svg> If we're not a fit, we'll tell you — and point you somewhere that is</li>
+          </ul>
+          <a class="fallback-btn" href="mailto:hello@humans2.ai?subject=Growth%20call%20with%20humans2&body=I%20just%20read%20the%20Viktor.com%20teardown.%20Here's%20what%20we're%20working%20on%3A" id="emailFallback">
+            Or just email hello@humans2.ai →
+          </a>
         </div>
-        <button class="btn" type="submit" id="submitBtn">
-          Unlock the teardown
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12 12 4M6 4h6v6"/></svg>
-        </button>
-        <p class="micro">No spam. One email, one teardown. Unsubscribe anytime.</p>
-        <div class="status" id="status" role="status" aria-live="polite"></div>
-      </form>
+        <div class="calendly-wrap">
+          <!-- Calendly inline widget -->
+          <div class="calendly-inline-widget"
+               id="calendlyEmbed"
+               data-url="https://calendly.com/humans2/discovery?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=0a0a0a&text_color=ffffff&primary_color=7c54ff"
+               style="min-width:320px;height:680px"></div>
+          <div class="calendly-fallback" style="display:none" id="calendlyFallback">
+            <h4>Book a 20-min strategy call</h4>
+            <p>Scheduling widget unavailable right now.</p>
+            <a class="fallback-btn" style="margin:0" href="https://calendly.com/humans2/discovery" target="_blank" rel="noopener">Open Calendly →</a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <footer>
-    <div>© 2026 Humans² · Human taste. Machine speed.</div>
-    <div><a href="mailto:hello@humans2.ai">hello@humans2.ai</a></div>
-  </footer>
-</section>
+  </section>
+</main>
 
-<!-- ================= TEARDOWN (PDF pages inline) ================= -->
-<section class="teardown" id="teardown" aria-hidden="true">
+<footer class="site-footer">
+  <div>© 2026 humans² · Based on public Meta Ad Library data.</div>
+  <div><a href="mailto:hello@humans2.ai">hello@humans2.ai</a></div>
+</footer>
 
-  <div class="tr-header">
-    <a class="logo" href="/" aria-label="Humans squared">Humans<sup>2</sup></a>
-    <div class="meta">
-      <span class="t">Viktor.com · paid acquisition teardown</span>
-      <span class="d">Meta Ad Library · Oct 2026 · 25 pages</span>
-    </div>
-  </div>
-
-  <div class="pdf-wrap" id="pdfWrap">
-    <!-- Pages injected by JS so we can lazy-load after reveal -->
-  </div>
-
-  <div class="tr-cta">
-    <span class="cap">Let's talk</span>
-    <h2>Want this done for <em>your</em> market?</h2>
-    <p>We take apart competitors' ad machines like this one, then build yours — creative testing loops, paid acquisition, funnels. Paid ads experts from YC managing $20M+ in marketing spend.</p>
-    <div class="cta-row">
-      <a class="btn-purple" href="mailto:hello@humans2.ai?subject=Growth%20call%20with%20humans2&body=I%20just%20read%20the%20Viktor.com%20teardown.%20Here's%20what%20we're%20working%20on%3A">
-        Book a discovery call →
-      </a>
-      <a class="btn-ghost" href="/">← Back to humans²</a>
-    </div>
-  </div>
-
-  <div class="tr-footer">
-    <div>© 2026 Humans² · Human taste. Machine speed.</div>
-    <div><a href="mailto:hello@humans2.ai">hello@humans2.ai</a></div>
-  </div>
-</section>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <script>
-// Three.js background — only shown on gate.
 (function(){
-  if(!window.THREE) return;
-  var canvas=document.getElementById('bg'); var renderer;
-  try{ renderer=new THREE.WebGLRenderer({canvas:canvas,antialias:true,alpha:true,powerPreference:'high-performance'}); }
-  catch(e){ canvas.style.display='none'; return; }
-  var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
-  var scene=new THREE.Scene(); scene.fog=new THREE.FogExp2(0x000000,0.11);
-  var camera=new THREE.PerspectiveCamera(55,1,0.1,100); camera.position.set(0,0,9);
-  var group=new THREE.Group(); scene.add(group);
-  group.add(new THREE.Mesh(new THREE.IcosahedronGeometry(3.6,2), new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true,transparent:true,opacity:0.055})));
-  var core=new THREE.Mesh(new THREE.IcosahedronGeometry(1.4,1), new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true,transparent:true,opacity:0.18}));
-  group.add(core);
-  var n=1000,pos=new Float32Array(n*3);
-  for(var i=0;i<n;i++){pos[i*3]=(Math.random()-0.5)*60;pos[i*3+1]=(Math.random()-0.5)*40;pos[i*3+2]=-10-Math.random()*40;}
-  var g=new THREE.BufferGeometry(); g.setAttribute('position',new THREE.BufferAttribute(pos,3));
-  scene.add(new THREE.Points(g,new THREE.PointsMaterial({color:0xffffff,size:0.05,transparent:true,opacity:0.4,depthWrite:false})));
-  var mx=0,my=0,tx=0,ty=0;
-  window.addEventListener('pointermove',function(e){tx=(e.clientX/window.innerWidth-0.5);ty=(e.clientY/window.innerHeight-0.5);},{passive:true});
-  function resize(){var w=window.innerWidth,h=window.innerHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();
-    group.position.y = w<640 ? 0.4 : 0; group.scale.setScalar(w<640?0.75:0.95);}
-  window.addEventListener('resize',resize); resize();
-  var t0=performance.now();
-  function frame(now){ var t=(now-t0)/1000; mx+=(tx-mx)*0.04; my+=(ty-my)*0.04;
-    if(!reduced){ group.children[0].rotation.y=t*0.04; group.children[0].rotation.x=Math.sin(t*0.07)*0.18; core.rotation.y=-t*0.14; core.rotation.z=t*0.08; }
-    group.rotation.y+= (mx*0.5-group.rotation.y)*0.05; group.rotation.x+= (my*0.3-group.rotation.x)*0.05;
-    renderer.render(scene,camera); requestAnimationFrame(frame);
-  }
-  requestAnimationFrame(frame);
-})();
-
-// Gate → teardown reveal + inject PDF pages
-(function(){
-  var form=document.getElementById('leadForm');
-  var status=document.getElementById('status');
-  var btn=document.getElementById('submitBtn');
-  var gate=document.getElementById('gate');
-  var teardown=document.getElementById('teardown');
-  var bg=document.getElementById('bg');
-  var vg=document.querySelector('.vignette');
-  var gr=document.querySelector('.grain');
-  var pdfWrap=document.getElementById('pdfWrap');
+  var formHero=document.getElementById('leadForm');
+  var formLock=document.getElementById('lockForm');
+  var deckSection=document.getElementById('deckSection');
+  var previewSection=document.getElementById('previewSection');
+  var pdfStack=document.getElementById('pdfStack');
   var TOTAL_PAGES=25;
-  var pagesInjected=false;
+  var injected=false;
 
   function injectPages(){
-    if(pagesInjected) return;
-    pagesInjected=true;
+    if(injected) return;
+    injected=true;
     var frag=document.createDocumentFragment();
     for(var i=1;i<=TOTAL_PAGES;i++){
       var num=i<10 ? '0'+i : ''+i;
       var page=document.createElement('div');
       page.className='pdf-page';
-      // Eager-load first 2, lazy-load the rest
       var loadMode=i<=2 ? 'eager' : 'lazy';
       page.innerHTML='<span class="pn-badge">Page '+num+' / '+TOTAL_PAGES+'</span>'+
                     '<img src="/og/pages/p-'+num+'.jpg" alt="Viktor.com teardown · page '+num+'" loading="'+loadMode+'" decoding="async" fetchpriority="'+(i<=2?'high':'low')+'">';
       frag.appendChild(page);
     }
-    pdfWrap.appendChild(frag);
+    pdfStack.appendChild(frag);
   }
 
-  function setStatus(msg,kind){ status.textContent=msg||''; status.className='status'+(kind?' '+kind:''); }
+  function setStatus(el,msg,kind){ el.textContent=msg||''; el.className='status'+(kind?' '+kind:''); }
 
   try{
     if(sessionStorage.getItem('h2_unlocked')==='1' || location.search.indexOf('unlocked=1')>=0){ reveal(true); }
   }catch(e){}
 
-  form.addEventListener('submit', async function(e){
-    e.preventDefault();
-    var email=document.getElementById('email').value.trim();
-    var hp=document.getElementById('company').value.trim();
-    if(hp){ reveal(); return; }
-    if(!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ setStatus('Please enter a valid email.','err'); return; }
-    btn.disabled=true; setStatus('Unlocking…');
-    try{
-      await fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,source:'lead-magnet-viktor-teardown',ts:new Date().toISOString()})});
-    }catch(err){}
-    reveal();
-  });
+  function wire(form, emailId, hpId, btnId, statusId){
+    var email=document.getElementById(emailId);
+    var hp=document.getElementById(hpId);
+    var btn=document.getElementById(btnId);
+    var status=document.getElementById(statusId);
+    form.addEventListener('submit', async function(e){
+      e.preventDefault();
+      var val=email.value.trim();
+      if(hp.value.trim()){ reveal(); return; }
+      if(!val || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)){ setStatus(status,'Please enter a valid email.','err'); return; }
+      btn.disabled=true; setStatus(status,'Unlocking…');
+      try{
+        await fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:val,source:'lead-magnet-viktor-playbook',ts:new Date().toISOString()})});
+      }catch(err){}
+      reveal();
+    });
+  }
+  wire(formHero,'email','company','submitBtn','status');
+  wire(formLock,'email2','company2','submitBtn2','status2');
 
   function reveal(skipScroll){
     try{ sessionStorage.setItem('h2_unlocked','1'); }catch(e){}
     injectPages();
-    gate.style.display='none';
-    if(bg) bg.style.display='none';
-    if(vg) vg.style.display='none';
-    if(gr) gr.style.display='none';
-    document.body.style.background='#0a0a0a';
-    teardown.classList.add('show');
-    teardown.setAttribute('aria-hidden','false');
+    previewSection.style.display='none';
+    deckSection.classList.add('show');
+    deckSection.setAttribute('aria-hidden','false');
     try{ history.replaceState(null,'',location.pathname+'?unlocked=1'); }catch(e){}
-    if(!skipScroll) window.scrollTo({top:0,behavior:'instant'});
+    if(!skipScroll) {
+      // Smooth scroll to deck after a tick
+      setTimeout(function(){
+        var top=deckSection.getBoundingClientRect().top + window.pageYOffset - 20;
+        window.scrollTo({top:top,behavior:'smooth'});
+      }, 100);
+    }
   }
+
+  // Calendly init — wait for widget script then initialize the embed, with timeout fallback
+  function initCalendly(){
+    if(window.Calendly && typeof Calendly.initInlineWidget==='function'){
+      try{
+        Calendly.initInlineWidget({
+          url: document.getElementById('calendlyEmbed').dataset.url,
+          parentElement: document.getElementById('calendlyEmbed')
+        });
+        return true;
+      }catch(e){ console.error('Calendly init failed', e); }
+    }
+    return false;
+  }
+  var tries=0;
+  var iv=setInterval(function(){
+    tries++;
+    if(initCalendly()){ clearInterval(iv); return; }
+    if(tries>30){
+      clearInterval(iv);
+      document.getElementById('calendlyEmbed').style.display='none';
+      document.getElementById('calendlyFallback').style.display='block';
+    }
+  }, 300);
 })();
 </script>
 </body>
